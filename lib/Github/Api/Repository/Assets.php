@@ -44,6 +44,21 @@ class Assets extends AbstractApi
     }
 
     /**
+     * Get an asset in selected repository's release
+     * GET /repos/:owner/:repo/releases/assets/:id
+     *
+     * @param  string  $username         the user who owns the repo
+     * @param  string  $repository       the name of the repo
+     * @param  integer $id               the id of the asset
+     *
+     * @return array
+     */
+    public function getContent($username, $repository, $id)
+    {
+        return $this->getRaw('repos/'.rawurlencode($username).'/'.rawurlencode($repository).'/releases/assets/'.rawurlencode($id), [], ['Accept' => 'application/octet-stream']);
+    }
+
+    /**
      * Create an asset for selected repository's release
      * POST /repos/:owner/:repo/releases/:id/assets?name=:filename
      *

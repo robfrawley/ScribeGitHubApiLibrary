@@ -66,15 +66,29 @@ abstract class AbstractApi implements ApiInterface
      */
     protected function get($path, array $parameters = array(), $requestHeaders = array())
     {
+        return ResponseMediator::getContent(
+            $this->getRaw($path, $parameters, $requestHeaders)
+        );
+    }
+
+    /**
+     * Send a GET request with query parameters.
+     *
+     * @param string $path              Request path.
+     * @param array $parameters         GET parameters.
+     * @param array $requestHeaders     Request Headers.
+     * @return \Guzzle\Http\EntityBodyInterface|mixed|string
+     */
+    protected function getRaw($path, array $parameters = array(), $requestHeaders = array())
+    {
         if (null !== $this->perPage && !isset($parameters['per_page'])) {
             $parameters['per_page'] = $this->perPage;
         }
         if (array_key_exists('ref', $parameters) && is_null($parameters['ref'])) {
             unset($parameters['ref']);
         }
-        $response = $this->client->getHttpClient()->get($path, $parameters, $requestHeaders);
-
-        return ResponseMediator::getContent($response);
+        
+        return $this->client->getHttpClient()->get($path, $parameters, $requestHeaders);
     }
 
     /**
