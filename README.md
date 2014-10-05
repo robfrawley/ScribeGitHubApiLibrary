@@ -1,6 +1,6 @@
-# PHP GitHub API
+# Symfony GitHub API Bundle
 
-[![Build Status](https://secure.travis-ci.org/KnpLabs/php-github-api.png)](http://travis-ci.org/KnpLabs/php-github-api)
+[![Build Status](https://secure.travis-ci.org/KnpLabs/php-github-api.png)](http://travis-ci.org/KnpLabs/php-github-api) [![Coverage Status](https://img.shields.io/coveralls/scribenet/ScribeGitHubApiBundle.svg)](https://coveralls.io/r/scribenet/ScribeGitHubApiBundle)
 
 A simple Object Oriented wrapper for GitHub API, written with PHP5.
 
