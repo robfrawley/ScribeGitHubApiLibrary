@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Github\Api\Enterprise\Stats | Scribe GitHub Library API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../traits.html">Traits</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Scribe GitHub Library API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Github/Api/Enterprise.html">Github\Api\Enterprise</a>\Stats</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>Stats</strong>        extends <a href="../../../Github/Api/AbstractApi.html"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../Github/Client.html"><abbr title="Github\Client">Client</abbr></a> $client)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Github/Api/AbstractApi.html#method___construct"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_configure">configure</a>()
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Github/Api/AbstractApi.html#method_configure"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null|int
+                </td>
+                <td class="last">
+                    <a href="#method_getPerPage">getPerPage</a>()
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Github/Api/AbstractApi.html#method_getPerPage"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setPerPage">setPerPage</a>(null|int $perPage)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Github/Api/AbstractApi.html#method_setPerPage"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_issues">issues</a>()
+                    <p>Returns the number of open and closed issues</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_hooks">hooks</a>()
+                    <p>Returns the number of active and inactive hooks</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_milestones">milestones</a>()
+                    <p>Returns the number of open and closed milestones</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_orgs">orgs</a>()
+                    <p>Returns the number of organizations, teams, team members, and disabled organizations</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_comments">comments</a>()
+                    <p>Returns the number of comments on issues, pull requests, commits, and gists</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_pages">pages</a>()
+                    <p>Returns the number of GitHub Pages sites</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_users">users</a>()
+                    <p>Returns the number of suspended and admin users</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_gists">gists</a>()
+                    <p>Returns the number of private and public gists</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_pulls">pulls</a>()
+                    <p>Returns the number of merged, mergeable, and unmergeable pull requests</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_repos">repos</a>()
+                    <p>Returns the number of organization-owned repositories, root repositories, forks, pushed commits, and wikis</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_all">all</a>()
+                    <p>Returns all of the statistics</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_show">show</a>(string $type)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">in <a href="../../../Github/Api/AbstractApi.html#method___construct"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a> at line 32</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../Github/Client.html"><abbr title="Github\Client">Client</abbr></a> $client)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Github/Client.html"><abbr title="Github\Client">Client</abbr></a></td>
+                <td>$client</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_configure">
+        <div class="location">in <a href="../../../Github/Api/AbstractApi.html#method_configure"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a> at line 37</div>
+        <code>            public            
+    <strong>configure</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPerPage">
+        <div class="location">in <a href="../../../Github/Api/AbstractApi.html#method_getPerPage"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a> at line 44</div>
+        <code>            public            null|int
+    <strong>getPerPage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null|int</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPerPage">
+        <div class="location">in <a href="../../../Github/Api/AbstractApi.html#method_setPerPage"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a> at line 52</div>
+        <code>            public            
+    <strong>setPerPage</strong>(null|int $perPage)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>null|int</td>
+                <td>$perPage</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_issues">
+        <div class="location">at line 14</div>
+        <code>            public            array
+    <strong>issues</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the number of open and closed issues</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>array with totals of open and closed issues</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hooks">
+        <div class="location">at line 24</div>
+        <code>            public            array
+    <strong>hooks</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the number of active and inactive hooks</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>array with totals of active and inactive hooks</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_milestones">
+        <div class="location">at line 34</div>
+        <code>            public            array
+    <strong>milestones</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the number of open and closed milestones</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>array with totals of open and closed milestones</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_orgs">
+        <div class="location">at line 44</div>
+        <code>            public            array
+    <strong>orgs</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the number of organizations, teams, team members, and disabled organizations</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>array with totals of organizations, teams, team members, and disabled organizations</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_comments">
+        <div class="location">at line 54</div>
+        <code>            public            array
+    <strong>comments</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the number of comments on issues, pull requests, commits, and gists</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>array with totals of comments on issues, pull requests, commits, and gists</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_pages">
+        <div class="location">at line 64</div>
+        <code>            public            array
+    <strong>pages</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the number of GitHub Pages sites</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>array with totals of GitHub Pages sites</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_users">
+        <div class="location">at line 74</div>
+        <code>            public            array
+    <strong>users</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the number of suspended and admin users</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>array with totals of suspended and admin users</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_gists">
+        <div class="location">at line 84</div>
+        <code>            public            array
+    <strong>gists</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the number of private and public gists</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>array with totals of private and public gists</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_pulls">
+        <div class="location">at line 94</div>
+        <code>            public            array
+    <strong>pulls</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the number of merged, mergeable, and unmergeable pull requests</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>array with totals of merged, mergeable, and unmergeable pull requests</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_repos">
+        <div class="location">at line 104</div>
+        <code>            public            array
+    <strong>repos</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the number of organization-owned repositories, root repositories, forks, pushed commits, and wikis</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>array with totals of organization-owned repositories, root repositories, forks, pushed commits, and wikis</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_all">
+        <div class="location">at line 114</div>
+        <code>            public            array
+    <strong>all</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns all of the statistics</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>array with all of the statistics</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_show">
+        <div class="location">at line 124</div>
+        <code>            public            array
+    <strong>show</strong>(string $type)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>The type of statistics to show</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

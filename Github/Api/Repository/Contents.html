@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Github\Api\Repository\Contents | Scribe GitHub Library API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../traits.html">Traits</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Scribe GitHub Library API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../Github/Api/Repository.html">Github\Api\Repository</a>\Contents</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>Contents</strong>        extends <a href="../../../Github/Api/AbstractApi.html"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../../Github/Client.html"><abbr title="Github\Client">Client</abbr></a> $client)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Github/Api/AbstractApi.html#method___construct"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_configure">configure</a>()
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Github/Api/AbstractApi.html#method_configure"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null|int
+                </td>
+                <td class="last">
+                    <a href="#method_getPerPage">getPerPage</a>()
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Github/Api/AbstractApi.html#method_getPerPage"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setPerPage">setPerPage</a>(null|int $perPage)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../Github/Api/AbstractApi.html#method_setPerPage"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_readme">readme</a>(string $username, string $repository, null|string $reference = null)
+                    <p>Get content of README file in a repository</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_show">show</a>(string $username, string $repository, null|string $path = null, null|string $reference = null)
+                    <p>Get contents of any file or directory in a repository</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_create">create</a>(string $username, string $repository, string $path, string $content, string $message, null|string $branch = null, array $committer = null)
+                    <p>Creates a new file in a repository</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method_exists">exists</a>(string $username, string $repository, string $path, null|string $reference = null)
+                    <p>Checks that a given path exists in a repository.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_update">update</a>(string $username, string $repository, string $path, string $content, string $message, string $sha, null|string $branch = null, array $committer = null)
+                    <p>Updates the contents of a file in a repository</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_rm">rm</a>(string $username, string $repository, string $path, string $message, string $sha, null|string $branch = null, array $committer = null)
+                    <p>Deletes a file from a repository</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_archive">archive</a>(string $username, string $repository, string $format, null|string $reference = null)
+                    <p>Get content of archives in a repository</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null|string
+                </td>
+                <td class="last">
+                    <a href="#method_download">download</a>(string $username, string $repository, string $path, null|string $reference = null)
+                    <p>Get the contents of a file in a repository</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">in <a href="../../../Github/Api/AbstractApi.html#method___construct"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a> at line 32</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../../Github/Client.html"><abbr title="Github\Client">Client</abbr></a> $client)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../Github/Client.html"><abbr title="Github\Client">Client</abbr></a></td>
+                <td>$client</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_configure">
+        <div class="location">in <a href="../../../Github/Api/AbstractApi.html#method_configure"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a> at line 37</div>
+        <code>            public            
+    <strong>configure</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPerPage">
+        <div class="location">in <a href="../../../Github/Api/AbstractApi.html#method_getPerPage"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a> at line 44</div>
+        <code>            public            null|int
+    <strong>getPerPage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null|int</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPerPage">
+        <div class="location">in <a href="../../../Github/Api/AbstractApi.html#method_setPerPage"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a> at line 52</div>
+        <code>            public            
+    <strong>setPerPage</strong>(null|int $perPage)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>null|int</td>
+                <td>$perPage</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_readme">
+        <div class="location">at line 27</div>
+        <code>            public            array
+    <strong>readme</strong>(string $username, string $repository, null|string $reference = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get content of README file in a repository</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>the user who owns the repository</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$repository</td>
+                <td>the name of the repository</td>
+            </tr>
+                    <tr>
+                <td>null|string</td>
+                <td>$reference</td>
+                <td>reference to a branch or commit</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>information for README file</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_show">
+        <div class="location">at line 45</div>
+        <code>            public            array
+    <strong>show</strong>(string $username, string $repository, null|string $path = null, null|string $reference = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get contents of any file or directory in a repository</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>the user who owns the repository</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$repository</td>
+                <td>the name of the repository</td>
+            </tr>
+                    <tr>
+                <td>null|string</td>
+                <td>$path</td>
+                <td>path to file or directory</td>
+            </tr>
+                    <tr>
+                <td>null|string</td>
+                <td>$reference</td>
+                <td>reference to a branch or commit</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>information for file | information for each item in directory</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_create">
+        <div class="location">at line 73</div>
+        <code>            public            array
+    <strong>create</strong>(string $username, string $repository, string $path, string $content, string $message, null|string $branch = null, array $committer = null)</code>
+    </h3>
+    <div class="details">
+        <p>Creates a new file in a repository</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>the user who owns the repository</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$repository</td>
+                <td>the name of the repository</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>path to file</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$content</td>
+                <td>contents of the new file</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td>the commit message</td>
+            </tr>
+                    <tr>
+                <td>null|string</td>
+                <td>$branch</td>
+                <td>name of a branch</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$committer</td>
+                <td>information about the committer</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>information about the new file</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="MissingArgumentException">MissingArgumentException</abbr></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_exists">
+        <div class="location">at line 105</div>
+        <code>            public            boolean
+    <strong>exists</strong>(string $username, string $repository, string $path, null|string $reference = null)</code>
+    </h3>
+    <div class="details">
+        <p>Checks that a given path exists in a repository.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>the user who owns the repository</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$repository</td>
+                <td>the name of the repository</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>path of file to check</td>
+            </tr>
+                    <tr>
+                <td>null|string</td>
+                <td>$reference</td>
+                <td>reference to a branch or commit</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_update">
+        <div class="location">at line 147</div>
+        <code>            public            array
+    <strong>update</strong>(string $username, string $repository, string $path, string $content, string $message, string $sha, null|string $branch = null, array $committer = null)</code>
+    </h3>
+    <div class="details">
+        <p>Updates the contents of a file in a repository</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>the user who owns the repository</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$repository</td>
+                <td>the name of the repository</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>path to file</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$content</td>
+                <td>contents of the new file</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td>the commit message</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$sha</td>
+                <td>blob SHA of the file being replaced</td>
+            </tr>
+                    <tr>
+                <td>null|string</td>
+                <td>$branch</td>
+                <td>name of a branch</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$committer</td>
+                <td>information about the committer</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>information about the updated file</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="MissingArgumentException">MissingArgumentException</abbr></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_rm">
+        <div class="location">at line 188</div>
+        <code>            public            array
+    <strong>rm</strong>(string $username, string $repository, string $path, string $message, string $sha, null|string $branch = null, array $committer = null)</code>
+    </h3>
+    <div class="details">
+        <p>Deletes a file from a repository</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>the user who owns the repository</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$repository</td>
+                <td>the name of the repository</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>path to file</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td>the commit message</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$sha</td>
+                <td>blob SHA of the file being deleted</td>
+            </tr>
+                    <tr>
+                <td>null|string</td>
+                <td>$branch</td>
+                <td>name of a branch</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$committer</td>
+                <td>information about the committer</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>information about the updated file</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="MissingArgumentException">MissingArgumentException</abbr></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_archive">
+        <div class="location">at line 222</div>
+        <code>            public            array
+    <strong>archive</strong>(string $username, string $repository, string $format, null|string $reference = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get content of archives in a repository</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>the user who owns the repository</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$repository</td>
+                <td>the name of the repository</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td>format of archive: tarball or zipball</td>
+            </tr>
+                    <tr>
+                <td>null|string</td>
+                <td>$reference</td>
+                <td>reference to a branch or commit</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>information for archives</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_download">
+        <div class="location">at line 246</div>
+        <code>            public            null|string
+    <strong>download</strong>(string $username, string $repository, string $path, null|string $reference = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get the contents of a file in a repository</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>the user who owns the repository</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$repository</td>
+                <td>the name of the repository</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>path to file</td>
+            </tr>
+                    <tr>
+                <td>null|string</td>
+                <td>$reference</td>
+                <td>reference to a branch or commit</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null|string</td>
+            <td>content of file, or null in case of base64_decode failure</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>If $path is not a file or if its encoding is different from base64</td>
+            </tr>
+                    <tr>
+                <td><a href="http://php.net/ErrorException"><abbr title="ErrorException">ErrorException</abbr></a></td>
+                <td>If $path doesn't include a 'content' index</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

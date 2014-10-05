@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Github\Api\Issue | Scribe GitHub Library API</title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Scribe GitHub Library API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../Github/Api.html">Github\Api</a>\Issue</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>Issue</strong>        extends <a href="../../Github/Api/AbstractApi.html"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a></p>
+
+            <div class="description">
+            <p>Listing issues, searching, editing and closing your projects issues.</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../Github/Client.html"><abbr title="Github\Client">Client</abbr></a> $client)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Github/Api/AbstractApi.html#method___construct"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_configure">configure</a>()
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Github/Api/AbstractApi.html#method_configure"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null|int
+                </td>
+                <td class="last">
+                    <a href="#method_getPerPage">getPerPage</a>()
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Github/Api/AbstractApi.html#method_getPerPage"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setPerPage">setPerPage</a>(null|int $perPage)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Github/Api/AbstractApi.html#method_setPerPage"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_all">all</a>(string $username, string $repository, array $params = array())
+                    <p>List issues by username, repo and state</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_find">find</a>(string $username, string $repository, string $state, string $keyword)
+                    <p>Search issues by username, repo, state and keyword</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_org">org</a>(string $organization, string $state, array $params = array())
+                    <p>List issues by organization</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_show">show</a>(string $username, string $repository, string $id)
+                    <p>Get extended information about an issue by its username, repo and number</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_create">create</a>(string $username, string $repository, array $params)
+                    <p>Create a new issue for the given username and repo.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_update">update</a>(string $username, string $repository, string $id, array $params)
+                    <p>Update issue information's by username, repo and issue number.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Github/Api/Issue/Comments.html"><abbr title="Github\Api\Issue\Comments">Comments</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_comments">comments</a>()
+                    <p>List an issue comments</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Github/Api/Issue/Events.html"><abbr title="Github\Api\Issue\Events">Events</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_events">events</a>()
+                    <p>List all project events</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Github/Api/Issue/Labels.html"><abbr title="Github\Api\Issue\Labels">Labels</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_labels">labels</a>()
+                    <p>List all project labels</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Github/Api/Issue/Milestones.html"><abbr title="Github\Api\Issue\Milestones">Milestones</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_milestones">milestones</a>()
+                    <p>List all project milestones</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">in <a href="../../Github/Api/AbstractApi.html#method___construct"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a> at line 32</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../Github/Client.html"><abbr title="Github\Client">Client</abbr></a> $client)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Github/Client.html"><abbr title="Github\Client">Client</abbr></a></td>
+                <td>$client</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_configure">
+        <div class="location">in <a href="../../Github/Api/AbstractApi.html#method_configure"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a> at line 37</div>
+        <code>            public            
+    <strong>configure</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPerPage">
+        <div class="location">in <a href="../../Github/Api/AbstractApi.html#method_getPerPage"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a> at line 44</div>
+        <code>            public            null|int
+    <strong>getPerPage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null|int</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPerPage">
+        <div class="location">in <a href="../../Github/Api/AbstractApi.html#method_setPerPage"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a> at line 52</div>
+        <code>            public            
+    <strong>setPerPage</strong>(null|int $perPage)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>null|int</td>
+                <td>$perPage</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_all">
+        <div class="location">at line 29</div>
+        <code>            public            array
+    <strong>all</strong>(string $username, string $repository, array $params = array())</code>
+    </h3>
+    <div class="details">
+        <p>List issues by username, repo and state</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>the username</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$repository</td>
+                <td>the repository</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>the additional parameters like milestone, assignees, labels, sort, direction</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>list of issues found</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_find">
+        <div class="location">at line 45</div>
+        <code>            public            array
+    <strong>find</strong>(string $username, string $repository, string $state, string $keyword)</code>
+    </h3>
+    <div class="details">
+        <p>Search issues by username, repo, state and keyword</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>the username</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$repository</td>
+                <td>the repository</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$state</td>
+                <td>the issue state, can be open or closed</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$keyword</td>
+                <td>the keyword to filter issues by</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>list of issues found</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_org">
+        <div class="location">at line 63</div>
+        <code>            public            array
+    <strong>org</strong>(string $organization, string $state, array $params = array())</code>
+    </h3>
+    <div class="details">
+        <p>List issues by organization</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$organization</td>
+                <td>the organization</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$state</td>
+                <td>the issue state, can be open or closed</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>the additional parameters like milestone, assignees, labels, sort, direction</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>list of issues found</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_show">
+        <div class="location">at line 81</div>
+        <code>            public            array
+    <strong>show</strong>(string $username, string $repository, string $id)</code>
+    </h3>
+    <div class="details">
+        <p>Get extended information about an issue by its username, repo and number</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>the username</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$repository</td>
+                <td>the repository</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td>the issue number</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>information about the issue</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_create">
+        <div class="location">at line 98</div>
+        <code>            public            array
+    <strong>create</strong>(string $username, string $repository, array $params)</code>
+    </h3>
+    <div class="details">
+        <p>Create a new issue for the given username and repo.</p>
+        <p>The issue is assigned to the authenticated user. Requires authentication.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>the username</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$repository</td>
+                <td>the repository</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>the new issue data</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>information about the issue</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="MissingArgumentException">MissingArgumentException</abbr></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_update">
+        <div class="location">at line 118</div>
+        <code>            public            array
+    <strong>update</strong>(string $username, string $repository, string $id, array $params)</code>
+    </h3>
+    <div class="details">
+        <p>Update issue information's by username, repo and issue number.</p>
+        <p>Requires authentication.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>the username</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$repository</td>
+                <td>the repository</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td>the issue number</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>key=>value user attributes to update. key can be title or body</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>information about the issue</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_comments">
+        <div class="location">at line 129</div>
+        <code>            public            <a href="../../Github/Api/Issue/Comments.html"><abbr title="Github\Api\Issue\Comments">Comments</abbr></a>
+    <strong>comments</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>List an issue comments</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Github/Api/Issue/Comments.html"><abbr title="Github\Api\Issue\Comments">Comments</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_events">
+        <div class="location">at line 140</div>
+        <code>            public            <a href="../../Github/Api/Issue/Events.html"><abbr title="Github\Api\Issue\Events">Events</abbr></a>
+    <strong>events</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>List all project events</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Github/Api/Issue/Events.html"><abbr title="Github\Api\Issue\Events">Events</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_labels">
+        <div class="location">at line 151</div>
+        <code>            public            <a href="../../Github/Api/Issue/Labels.html"><abbr title="Github\Api\Issue\Labels">Labels</abbr></a>
+    <strong>labels</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>List all project labels</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Github/Api/Issue/Labels.html"><abbr title="Github\Api\Issue\Labels">Labels</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_milestones">
+        <div class="location">at line 162</div>
+        <code>            public            <a href="../../Github/Api/Issue/Milestones.html"><abbr title="Github\Api\Issue\Milestones">Milestones</abbr></a>
+    <strong>milestones</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>List all project milestones</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Github/Api/Issue/Milestones.html"><abbr title="Github\Api\Issue\Milestones">Milestones</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

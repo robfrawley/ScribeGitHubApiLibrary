@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Github\Api\CurrentUser | Scribe GitHub Library API</title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Scribe GitHub Library API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../Github/Api.html">Github\Api</a>\CurrentUser</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>CurrentUser</strong>        extends <a href="../../Github/Api/AbstractApi.html"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a></p>
+
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../Github/Client.html"><abbr title="Github\Client">Client</abbr></a> $client)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Github/Api/AbstractApi.html#method___construct"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_configure">configure</a>()
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Github/Api/AbstractApi.html#method_configure"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null|int
+                </td>
+                <td class="last">
+                    <a href="#method_getPerPage">getPerPage</a>()
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Github/Api/AbstractApi.html#method_getPerPage"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setPerPage">setPerPage</a>(null|int $perPage)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Github/Api/AbstractApi.html#method_setPerPage"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_show">show</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_update">update</a>(array $params)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Github/Api/CurrentUser/Emails.html"><abbr title="Github\Api\CurrentUser\Emails">Emails</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_emails">emails</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Github/Api/CurrentUser/Followers.html"><abbr title="Github\Api\CurrentUser\Followers">Followers</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_follow">follow</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_followers">followers</a>($page = 1)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_issues">issues</a>(array $params = array(), boolean $includeOrgIssues = true)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Github/Api/CurrentUser/DeployKeys.html"><abbr title="Github\Api\CurrentUser\DeployKeys">DeployKeys</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_keys">keys</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Github/Api/CurrentUser/Notifications.html"><abbr title="Github\Api\CurrentUser\Notifications">Notifications</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_notifications">notifications</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_organizations">organizations</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_repositories">repositories</a>(string $type = &#039;owner&#039;, string $sort = &#039;full_name&#039;, string $direction = &#039;asc&#039;)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Github/Api/CurrentUser/Watchers.html"><abbr title="Github\Api\CurrentUser\Watchers">Watchers</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_watchers">watchers</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_watched">watched</a>($page = 1)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Github/Api/CurrentUser/Starring.html"><abbr title="Github\Api\CurrentUser\Starring">Starring</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_starring">starring</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_starred">starred</a>($page = 1)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">in <a href="../../Github/Api/AbstractApi.html#method___construct"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a> at line 32</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../Github/Client.html"><abbr title="Github\Client">Client</abbr></a> $client)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Github/Client.html"><abbr title="Github\Client">Client</abbr></a></td>
+                <td>$client</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_configure">
+        <div class="location">in <a href="../../Github/Api/AbstractApi.html#method_configure"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a> at line 37</div>
+        <code>            public            
+    <strong>configure</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPerPage">
+        <div class="location">in <a href="../../Github/Api/AbstractApi.html#method_getPerPage"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a> at line 44</div>
+        <code>            public            null|int
+    <strong>getPerPage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null|int</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPerPage">
+        <div class="location">in <a href="../../Github/Api/AbstractApi.html#method_setPerPage"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a> at line 52</div>
+        <code>            public            
+    <strong>setPerPage</strong>(null|int $perPage)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>null|int</td>
+                <td>$perPage</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_show">
+        <div class="location">at line 19</div>
+        <code>            public            
+    <strong>show</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_update">
+        <div class="location">at line 24</div>
+        <code>            public            
+    <strong>update</strong>(array $params)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_emails">
+        <div class="location">at line 32</div>
+        <code>            public            <a href="../../Github/Api/CurrentUser/Emails.html"><abbr title="Github\Api\CurrentUser\Emails">Emails</abbr></a>
+    <strong>emails</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Github/Api/CurrentUser/Emails.html"><abbr title="Github\Api\CurrentUser\Emails">Emails</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_follow">
+        <div class="location">at line 40</div>
+        <code>            public            <a href="../../Github/Api/CurrentUser/Followers.html"><abbr title="Github\Api\CurrentUser\Followers">Followers</abbr></a>
+    <strong>follow</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Github/Api/CurrentUser/Followers.html"><abbr title="Github\Api\CurrentUser\Followers">Followers</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_followers">
+        <div class="location">at line 45</div>
+        <code>            public            
+    <strong>followers</strong>($page = 1)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$page</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_issues">
+        <div class="location">at line 60</div>
+        <code>            public            array
+    <strong>issues</strong>(array $params = array(), boolean $includeOrgIssues = true)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$includeOrgIssues</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_keys">
+        <div class="location">at line 68</div>
+        <code>            public            <a href="../../Github/Api/CurrentUser/DeployKeys.html"><abbr title="Github\Api\CurrentUser\DeployKeys">DeployKeys</abbr></a>
+    <strong>keys</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Github/Api/CurrentUser/DeployKeys.html"><abbr title="Github\Api\CurrentUser\DeployKeys">DeployKeys</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_notifications">
+        <div class="location">at line 76</div>
+        <code>            public            <a href="../../Github/Api/CurrentUser/Notifications.html"><abbr title="Github\Api\CurrentUser\Notifications">Notifications</abbr></a>
+    <strong>notifications</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Github/Api/CurrentUser/Notifications.html"><abbr title="Github\Api\CurrentUser\Notifications">Notifications</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_organizations">
+        <div class="location">at line 86</div>
+        <code>            public            array
+    <strong>organizations</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_repositories">
+        <div class="location">at line 100</div>
+        <code>            public            array
+    <strong>repositories</strong>(string $type = &#039;owner&#039;, string $sort = &#039;full_name&#039;, string $direction = &#039;asc&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>role in the repository</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$sort</td>
+                <td>sort by</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$direction</td>
+                <td>direction of sort, ask or desc</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_watchers">
+        <div class="location">at line 112</div>
+        <code>            public            <a href="../../Github/Api/CurrentUser/Watchers.html"><abbr title="Github\Api\CurrentUser\Watchers">Watchers</abbr></a>
+    <strong>watchers</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Github/Api/CurrentUser/Watchers.html"><abbr title="Github\Api\CurrentUser\Watchers">Watchers</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_watched">
+        <div class="location">at line 120</div>
+        <code>            public            
+    <strong>watched</strong>($page = 1)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$page</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_starring">
+        <div class="location">at line 130</div>
+        <code>            public            <a href="../../Github/Api/CurrentUser/Starring.html"><abbr title="Github\Api\CurrentUser\Starring">Starring</abbr></a>
+    <strong>starring</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Github/Api/CurrentUser/Starring.html"><abbr title="Github\Api\CurrentUser\Starring">Starring</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_starred">
+        <div class="location">at line 138</div>
+        <code>            public            
+    <strong>starred</strong>($page = 1)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$page</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

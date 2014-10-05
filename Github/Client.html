@@ -1,0 +1,1662 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Github\Client | Scribe GitHub Library API</title>
+                    <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../classes.html">Classes</a></li>
+                            <li><a href="../namespaces.html">Namespaces</a></li>
+                        <li><a href="../interfaces.html">Interfaces</a></li>
+            <li><a href="../traits.html">Traits</a></li>
+            <li><a href="../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Scribe GitHub Library API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../Github.html">Github</a>\Client</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>Client</strong></p>
+
+            <div class="description">
+            <p>Simple yet very cool PHP GitHub client</p>
+            <p>
+</p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>AUTH_URL_TOKEN</td>
+                <td class="last">
+                    <p><em>Constant for authentication method.</em></p>
+                    <p>Indicates the default, but deprecated
+login with username and token in URL.</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AUTH_URL_CLIENT_ID</td>
+                <td class="last">
+                    <p><em>Constant for authentication method.</em></p>
+                    <p>Not indicates the new login, but allows
+usage of unauthenticated rate limited requests for given client<em>id + client</em>secret</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AUTH_HTTP_PASSWORD</td>
+                <td class="last">
+                    <p><em>Constant for authentication method.</em></p>
+                    <p>Indicates the new favored login method
+with username and password via HTTP Authentication.</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>AUTH_HTTP_TOKEN</td>
+                <td class="last">
+                    <p><em>Constant for authentication method.</em></p>
+                    <p>Indicates the new login method with
+with username and token via HTTP Authentication.</p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../Github/HttpClient/HttpClientInterface.html"><abbr title="Github\HttpClient\HttpClientInterface">HttpClientInterface</abbr></a> $httpClient = null)
+                    <p>Instantiate a new GitHub client</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../Github/Api/ApiInterface.html"><abbr title="Github\Api\ApiInterface">ApiInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_api">api</a>(string $name)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_authenticate">authenticate</a>(string $tokenOrLogin, null|string $password = null, null|string $authMethod = null)
+                    <p>Authenticate a user for all next requests</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setEnterpriseUrl">setEnterpriseUrl</a>(string $enterpriseUrl)
+                    <p>Sets the URL of your GitHub Enterprise instance.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../Github/HttpClient/HttpClient.html"><abbr title="Github\HttpClient\HttpClient">HttpClient</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getHttpClient">getHttpClient</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setHttpClient">setHttpClient</a>(<a href="../Github/HttpClient/HttpClientInterface.html"><abbr title="Github\HttpClient\HttpClientInterface">HttpClientInterface</abbr></a> $httpClient)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_clearHeaders">clearHeaders</a>()
+                    <p>Clears used headers</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setHeaders">setHeaders</a>(array $headers)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getOption">getOption</a>(string $name)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setOption">setOption</a>(string $name, mixed $value)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getSupportedApiVersions">getSupportedApiVersions</a>()
+                    <p>Returns an array of valid API versions supported by this client.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../Github/Api/ApiInterface.html"><abbr title="Github\Api\ApiInterface">ApiInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method___call">__call</a>($name, $args)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Api\CurrentUser">CurrentUser</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_currentUser">currentUser</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Api\CurrentUser">CurrentUser</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_me">me</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Api\Enterprise">Enterprise</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_ent">ent</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Api\Enterprise">Enterprise</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_enterprise">enterprise</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Api\GitData">GitData</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_git">git</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Api\GitData">GitData</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_gitData">gitData</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Api\Gists">Gists</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_gist">gist</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Api\Gists">Gists</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_gists">gists</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Api\Issue">Issue</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_issue">issue</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Api\Issue">Issue</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_issues">issues</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Api\Markdown">Markdown</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_markdown">markdown</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Api\Organization">Organization</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_organization">organization</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Api\Organization">Organization</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_organizations">organizations</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Api\PullRequest">PullRequest</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_pr">pr</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Api\PullRequest">PullRequest</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_pullRequest">pullRequest</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Api\PullRequest">PullRequest</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_pullRequests">pullRequests</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Api\Repo">Repo</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_repo">repo</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Api\Repo">Repo</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_repos">repos</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Api\Repo">Repo</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_repository">repository</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Api\Repo">Repo</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_repositories">repositories</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Api\Organization">Organization</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_team">team</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Api\Organization">Organization</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_teams">teams</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Api\User">User</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_user">user</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Api\User">User</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_users">users</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Api\Authorizations">Authorizations</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_authorization">authorization</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Api\Authorizations">Authorizations</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_authorizations">authorizations</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Api\Meta">Meta</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_meta">meta</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 99</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../Github/HttpClient/HttpClientInterface.html"><abbr title="Github\HttpClient\HttpClientInterface">HttpClientInterface</abbr></a> $httpClient = null)</code>
+    </h3>
+    <div class="details">
+        <p>Instantiate a new GitHub client</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../Github/HttpClient/HttpClientInterface.html"><abbr title="Github\HttpClient\HttpClientInterface">HttpClientInterface</abbr></a></td>
+                <td>$httpClient</td>
+                <td>Github http client</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_api">
+        <div class="location">at line 111</div>
+        <code>            public            <a href="../Github/Api/ApiInterface.html"><abbr title="Github\Api\ApiInterface">ApiInterface</abbr></a>
+    <strong>api</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../Github/Api/ApiInterface.html"><abbr title="Github\Api\ApiInterface">ApiInterface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_authenticate">
+        <div class="location">at line 200</div>
+        <code>            public            
+    <strong>authenticate</strong>(string $tokenOrLogin, null|string $password = null, null|string $authMethod = null)</code>
+    </h3>
+    <div class="details">
+        <p>Authenticate a user for all next requests</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$tokenOrLogin</td>
+                <td>GitHub private token/username/client ID</td>
+            </tr>
+                    <tr>
+                <td>null|string</td>
+                <td>$password</td>
+                <td>GitHub password/secret (optionally can contain $authMethod)</td>
+            </tr>
+                    <tr>
+                <td>null|string</td>
+                <td>$authMethod</td>
+                <td>One of the AUTH_* class constants</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>If no authentication method was given</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setEnterpriseUrl">
+        <div class="location">at line 223</div>
+        <code>            public            
+    <strong>setEnterpriseUrl</strong>(string $enterpriseUrl)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the URL of your GitHub Enterprise instance.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$enterpriseUrl</td>
+                <td>URL of the API in the form of http(s)://hostname</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getHttpClient">
+        <div class="location">at line 232</div>
+        <code>            public            <a href="../Github/HttpClient/HttpClient.html"><abbr title="Github\HttpClient\HttpClient">HttpClient</abbr></a>
+    <strong>getHttpClient</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../Github/HttpClient/HttpClient.html"><abbr title="Github\HttpClient\HttpClient">HttpClient</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setHttpClient">
+        <div class="location">at line 244</div>
+        <code>            public            
+    <strong>setHttpClient</strong>(<a href="../Github/HttpClient/HttpClientInterface.html"><abbr title="Github\HttpClient\HttpClientInterface">HttpClientInterface</abbr></a> $httpClient)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../Github/HttpClient/HttpClientInterface.html"><abbr title="Github\HttpClient\HttpClientInterface">HttpClientInterface</abbr></a></td>
+                <td>$httpClient</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_clearHeaders">
+        <div class="location">at line 252</div>
+        <code>            public            
+    <strong>clearHeaders</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Clears used headers</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setHeaders">
+        <div class="location">at line 260</div>
+        <code>            public            
+    <strong>setHeaders</strong>(array $headers)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOption">
+        <div class="location">at line 272</div>
+        <code>            public            mixed
+    <strong>getOption</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setOption">
+        <div class="location">at line 288</div>
+        <code>            public            
+    <strong>setOption</strong>(string $name, mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSupportedApiVersions">
+        <div class="location">at line 306</div>
+        <code>            public            array
+    <strong>getSupportedApiVersions</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns an array of valid API versions supported by this client.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___call">
+        <div class="location">at line 318</div>
+        <code>            public            <a href="../Github/Api/ApiInterface.html"><abbr title="Github\Api\ApiInterface">ApiInterface</abbr></a>
+    <strong>__call</strong>($name, $args)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$args</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../Github/Api/ApiInterface.html"><abbr title="Github\Api\ApiInterface">ApiInterface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_currentUser">
+        <div class="location">at line 46</div>
+        <code>                        <abbr title="Api\CurrentUser">CurrentUser</abbr>
+    <strong>currentUser</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Api\CurrentUser">CurrentUser</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_me">
+        <div class="location">at line 46</div>
+        <code>                        <abbr title="Api\CurrentUser">CurrentUser</abbr>
+    <strong>me</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Api\CurrentUser">CurrentUser</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_ent">
+        <div class="location">at line 46</div>
+        <code>                        <abbr title="Api\Enterprise">Enterprise</abbr>
+    <strong>ent</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Api\Enterprise">Enterprise</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_enterprise">
+        <div class="location">at line 46</div>
+        <code>                        <abbr title="Api\Enterprise">Enterprise</abbr>
+    <strong>enterprise</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Api\Enterprise">Enterprise</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_git">
+        <div class="location">at line 46</div>
+        <code>                        <abbr title="Api\GitData">GitData</abbr>
+    <strong>git</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Api\GitData">GitData</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_gitData">
+        <div class="location">at line 46</div>
+        <code>                        <abbr title="Api\GitData">GitData</abbr>
+    <strong>gitData</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Api\GitData">GitData</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_gist">
+        <div class="location">at line 46</div>
+        <code>                        <abbr title="Api\Gists">Gists</abbr>
+    <strong>gist</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Api\Gists">Gists</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_gists">
+        <div class="location">at line 46</div>
+        <code>                        <abbr title="Api\Gists">Gists</abbr>
+    <strong>gists</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Api\Gists">Gists</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_issue">
+        <div class="location">at line 46</div>
+        <code>                        <abbr title="Api\Issue">Issue</abbr>
+    <strong>issue</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Api\Issue">Issue</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_issues">
+        <div class="location">at line 46</div>
+        <code>                        <abbr title="Api\Issue">Issue</abbr>
+    <strong>issues</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Api\Issue">Issue</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_markdown">
+        <div class="location">at line 46</div>
+        <code>                        <abbr title="Api\Markdown">Markdown</abbr>
+    <strong>markdown</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Api\Markdown">Markdown</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_organization">
+        <div class="location">at line 46</div>
+        <code>                        <abbr title="Api\Organization">Organization</abbr>
+    <strong>organization</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Api\Organization">Organization</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_organizations">
+        <div class="location">at line 46</div>
+        <code>                        <abbr title="Api\Organization">Organization</abbr>
+    <strong>organizations</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Api\Organization">Organization</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_pr">
+        <div class="location">at line 46</div>
+        <code>                        <abbr title="Api\PullRequest">PullRequest</abbr>
+    <strong>pr</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Api\PullRequest">PullRequest</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_pullRequest">
+        <div class="location">at line 46</div>
+        <code>                        <abbr title="Api\PullRequest">PullRequest</abbr>
+    <strong>pullRequest</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Api\PullRequest">PullRequest</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_pullRequests">
+        <div class="location">at line 46</div>
+        <code>                        <abbr title="Api\PullRequest">PullRequest</abbr>
+    <strong>pullRequests</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Api\PullRequest">PullRequest</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_repo">
+        <div class="location">at line 46</div>
+        <code>                        <abbr title="Api\Repo">Repo</abbr>
+    <strong>repo</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Api\Repo">Repo</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_repos">
+        <div class="location">at line 46</div>
+        <code>                        <abbr title="Api\Repo">Repo</abbr>
+    <strong>repos</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Api\Repo">Repo</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_repository">
+        <div class="location">at line 46</div>
+        <code>                        <abbr title="Api\Repo">Repo</abbr>
+    <strong>repository</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Api\Repo">Repo</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_repositories">
+        <div class="location">at line 46</div>
+        <code>                        <abbr title="Api\Repo">Repo</abbr>
+    <strong>repositories</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Api\Repo">Repo</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_team">
+        <div class="location">at line 46</div>
+        <code>                        <abbr title="Api\Organization">Organization</abbr>
+    <strong>team</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Api\Organization">Organization</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_teams">
+        <div class="location">at line 46</div>
+        <code>                        <abbr title="Api\Organization">Organization</abbr>
+    <strong>teams</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Api\Organization">Organization</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_user">
+        <div class="location">at line 46</div>
+        <code>                        <abbr title="Api\User">User</abbr>
+    <strong>user</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Api\User">User</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_users">
+        <div class="location">at line 46</div>
+        <code>                        <abbr title="Api\User">User</abbr>
+    <strong>users</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Api\User">User</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_authorization">
+        <div class="location">at line 46</div>
+        <code>                        <abbr title="Api\Authorizations">Authorizations</abbr>
+    <strong>authorization</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Api\Authorizations">Authorizations</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_authorizations">
+        <div class="location">at line 46</div>
+        <code>                        <abbr title="Api\Authorizations">Authorizations</abbr>
+    <strong>authorizations</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Api\Authorizations">Authorizations</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_meta">
+        <div class="location">at line 46</div>
+        <code>                        <abbr title="Api\Meta">Meta</abbr>
+    <strong>meta</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Api\Meta">Meta</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

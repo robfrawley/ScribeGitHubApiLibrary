@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Github\Api\PullRequest | Scribe GitHub Library API</title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Scribe GitHub Library API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../Github/Api.html">Github\Api</a>\PullRequest</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>PullRequest</strong>        extends <a href="../../Github/Api/AbstractApi.html"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a></p>
+
+            <div class="description">
+            <p>API for accessing Pull Requests from your Git/Github repositories.</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../Github/Client.html"><abbr title="Github\Client">Client</abbr></a> $client)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Github/Api/AbstractApi.html#method___construct"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_configure">configure</a>()
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Github/Api/AbstractApi.html#method_configure"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null|int
+                </td>
+                <td class="last">
+                    <a href="#method_getPerPage">getPerPage</a>()
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Github/Api/AbstractApi.html#method_getPerPage"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setPerPage">setPerPage</a>(null|int $perPage)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Github/Api/AbstractApi.html#method_setPerPage"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_all">all</a>(string $username, string $repository, array $params = array())
+                    <p>Get a listing of a project's pull requests by the username, repository and (optionally) state.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_show">show</a>(string $username, string $repository, string $id)
+                    <p>Show all details of a pull request, including the discussions.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_commits">commits</a>($username, $repository, $id)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_files">files</a>($username, $repository, $id)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_comments">comments</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_create">create</a>(string $username, string $repository, array $params)
+                    <p>Create a pull request</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_update">update</a>($username, $repository, $id, array $params)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_merged">merged</a>($username, $repository, $id)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_merge">merge</a>($username, $repository, $id, $message = null)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">in <a href="../../Github/Api/AbstractApi.html#method___construct"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a> at line 32</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../Github/Client.html"><abbr title="Github\Client">Client</abbr></a> $client)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Github/Client.html"><abbr title="Github\Client">Client</abbr></a></td>
+                <td>$client</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_configure">
+        <div class="location">in <a href="../../Github/Api/AbstractApi.html#method_configure"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a> at line 37</div>
+        <code>            public            
+    <strong>configure</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPerPage">
+        <div class="location">in <a href="../../Github/Api/AbstractApi.html#method_getPerPage"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a> at line 44</div>
+        <code>            public            null|int
+    <strong>getPerPage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null|int</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPerPage">
+        <div class="location">in <a href="../../Github/Api/AbstractApi.html#method_setPerPage"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a> at line 52</div>
+        <code>            public            
+    <strong>setPerPage</strong>(null|int $perPage)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>null|int</td>
+                <td>$perPage</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_all">
+        <div class="location">at line 26</div>
+        <code>            public            array
+    <strong>all</strong>(string $username, string $repository, array $params = array())</code>
+    </h3>
+    <div class="details">
+        <p>Get a listing of a project's pull requests by the username, repository and (optionally) state.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>the username</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$repository</td>
+                <td>the repository</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>a list of extra parameters.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>array of pull requests for the project</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_show">
+        <div class="location">at line 46</div>
+        <code>            public            array
+    <strong>show</strong>(string $username, string $repository, string $id)</code>
+    </h3>
+    <div class="details">
+        <p>Show all details of a pull request, including the discussions.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>the username</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$repository</td>
+                <td>the repository</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td>the ID of the pull request for which details are retrieved</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>array of pull requests for the project</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_commits">
+        <div class="location">at line 51</div>
+        <code>            public            
+    <strong>commits</strong>($username, $repository, $id)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$username</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$repository</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$id</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_files">
+        <div class="location">at line 56</div>
+        <code>            public            
+    <strong>files</strong>($username, $repository, $id)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$username</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$repository</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$id</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_comments">
+        <div class="location">at line 61</div>
+        <code>            public            
+    <strong>comments</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_create">
+        <div class="location">at line 82</div>
+        <code>            public            array
+    <strong>create</strong>(string $username, string $repository, array $params)</code>
+    </h3>
+    <div class="details">
+        <p>Create a pull request</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>the username</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$repository</td>
+                <td>the repository</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>A String of the branch or commit SHA that you want your changes to be pulled to. A String of the branch or commit SHA of your changes. Typically this will be a branch. If the branch is in a fork of the original repository, specify the username first: "my-user:some-branch". The String title of the Pull Request. The String body of the Pull Request. The issue number. Used when title and body is not set.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="MissingArgumentException">MissingArgumentException</abbr></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_update">
+        <div class="location">at line 101</div>
+        <code>            public            
+    <strong>update</strong>($username, $repository, $id, array $params)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$username</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$repository</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$id</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_merged">
+        <div class="location">at line 110</div>
+        <code>            public            
+    <strong>merged</strong>($username, $repository, $id)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$username</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$repository</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$id</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_merge">
+        <div class="location">at line 115</div>
+        <code>            public            
+    <strong>merge</strong>($username, $repository, $id, $message = null)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$username</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$repository</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$id</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$message</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

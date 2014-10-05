@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Github\HttpClient\HttpClientInterface | Scribe GitHub Library API</title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Scribe GitHub Library API</div>
+
+            <div class="type">Interface</div>
+    <h1><a href="../../Github/HttpClient.html">Github\HttpClient</a>\HttpClientInterface</h1>
+    </div>
+        <div class="content">
+                <p>    interface
+    <strong>HttpClientInterface</strong></p>
+
+            <div class="description">
+            <p>Performs requests on GitHub API.</p>
+            <p>API documentation should be self-explanatory.</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    <abbr title="Guzzle\Http\Message\Response">Response</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_get">get</a>(string $path, array $parameters = array(), array $headers = array())
+                    <p>Send a GET request</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Guzzle\Http\Message\Response">Response</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_post">post</a>(string $path, mixed $body = null, array $headers = array())
+                    <p>Send a POST request</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Guzzle\Http\Message\Response">Response</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_patch">patch</a>(string $path, mixed $body = null, array $headers = array())
+                    <p>Send a PATCH request</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Guzzle\Http\Message\Response">Response</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_put">put</a>(string $path, mixed $body, array $headers = array())
+                    <p>Send a PUT request</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Guzzle\Http\Message\Response">Response</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_delete">delete</a>(string $path, mixed $body = null, array $headers = array())
+                    <p>Send a DELETE request</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Guzzle\Http\Message\Response">Response</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_request">request</a>(string $path, mixed $body, string $httpMethod = &#039;GET&#039;, array $headers = array())
+                    <p>Send a request to the server, receive a response, decode the response and returns an associative array</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setOption">setOption</a>(string $name, mixed $value)
+                    <p>Change an option value.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setHeaders">setHeaders</a>(array $headers)
+                    <p>Set HTTP headers</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_authenticate">authenticate</a>(string $tokenOrLogin, null|string $password, null|string $authMethod)
+                    <p>Authenticate a user for all next requests</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_get">
+        <div class="location">at line 24</div>
+        <code>            public            <abbr title="Guzzle\Http\Message\Response">Response</abbr>
+    <strong>get</strong>(string $path, array $parameters = array(), array $headers = array())</code>
+    </h3>
+    <div class="details">
+        <p>Send a GET request</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>Request path</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td>GET Parameters</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>Reconfigure the request headers for this call only</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Guzzle\Http\Message\Response">Response</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_post">
+        <div class="location">at line 35</div>
+        <code>            public            <abbr title="Guzzle\Http\Message\Response">Response</abbr>
+    <strong>post</strong>(string $path, mixed $body = null, array $headers = array())</code>
+    </h3>
+    <div class="details">
+        <p>Send a POST request</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>Request path</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$body</td>
+                <td>Request body</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>Reconfigure the request headers for this call only</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Guzzle\Http\Message\Response">Response</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_patch">
+        <div class="location">at line 47</div>
+        <code>            public            <abbr title="Guzzle\Http\Message\Response">Response</abbr>
+    <strong>patch</strong>(string $path, mixed $body = null, array $headers = array())</code>
+    </h3>
+    <div class="details">
+        <p>Send a PATCH request</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>Request path</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$body</td>
+                <td>Request body</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>Reconfigure the request headers for this call only</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Guzzle\Http\Message\Response">Response</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_put">
+        <div class="location">at line 58</div>
+        <code>            public            <abbr title="Guzzle\Http\Message\Response">Response</abbr>
+    <strong>put</strong>(string $path, mixed $body, array $headers = array())</code>
+    </h3>
+    <div class="details">
+        <p>Send a PUT request</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>Request path</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$body</td>
+                <td>Request body</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>Reconfigure the request headers for this call only</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Guzzle\Http\Message\Response">Response</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_delete">
+        <div class="location">at line 69</div>
+        <code>            public            <abbr title="Guzzle\Http\Message\Response">Response</abbr>
+    <strong>delete</strong>(string $path, mixed $body = null, array $headers = array())</code>
+    </h3>
+    <div class="details">
+        <p>Send a DELETE request</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>Request path</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$body</td>
+                <td>Request body</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>Reconfigure the request headers for this call only</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Guzzle\Http\Message\Response">Response</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_request">
+        <div class="location">at line 82</div>
+        <code>            public            <abbr title="Guzzle\Http\Message\Response">Response</abbr>
+    <strong>request</strong>(string $path, mixed $body, string $httpMethod = &#039;GET&#039;, array $headers = array())</code>
+    </h3>
+    <div class="details">
+        <p>Send a request to the server, receive a response, decode the response and returns an associative array</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>Request path</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$body</td>
+                <td>Request body</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$httpMethod</td>
+                <td>HTTP method to use</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>Request headers</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Guzzle\Http\Message\Response">Response</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setOption">
+        <div class="location">at line 92</div>
+        <code>            public            
+    <strong>setOption</strong>(string $name, mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>Change an option value.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>The option name</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The value</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setHeaders">
+        <div class="location">at line 99</div>
+        <code>            public            
+    <strong>setHeaders</strong>(array $headers)</code>
+    </h3>
+    <div class="details">
+        <p>Set HTTP headers</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_authenticate">
+        <div class="location">at line 110</div>
+        <code>            public            
+    <strong>authenticate</strong>(string $tokenOrLogin, null|string $password, null|string $authMethod)</code>
+    </h3>
+    <div class="details">
+        <p>Authenticate a user for all next requests</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$tokenOrLogin</td>
+                <td>GitHub private token/username/client ID</td>
+            </tr>
+                    <tr>
+                <td>null|string</td>
+                <td>$password</td>
+                <td>GitHub password/secret (optionally can contain $authMethod)</td>
+            </tr>
+                    <tr>
+                <td>null|string</td>
+                <td>$authMethod</td>
+                <td>One of the AUTH_* class constants</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>If no authentication method was given</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

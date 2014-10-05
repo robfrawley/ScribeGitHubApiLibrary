@@ -1,0 +1,1548 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Github\Api\Repo | Scribe GitHub Library API</title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Scribe GitHub Library API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../Github/Api.html">Github\Api</a>\Repo</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>Repo</strong>        extends <a href="../../Github/Api/AbstractApi.html"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a></p>
+
+            <div class="description">
+            <p>Searching repositories, getting repository information and managing repository information for authenticated users.</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../Github/Client.html"><abbr title="Github\Client">Client</abbr></a> $client)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Github/Api/AbstractApi.html#method___construct"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_configure">configure</a>()
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Github/Api/AbstractApi.html#method_configure"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null|int
+                </td>
+                <td class="last">
+                    <a href="#method_getPerPage">getPerPage</a>()
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Github/Api/AbstractApi.html#method_getPerPage"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setPerPage">setPerPage</a>(null|int $perPage)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Github/Api/AbstractApi.html#method_setPerPage"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_find">find</a>(string $keyword, array $params = array())
+                    <p>Search repositories by keyword:</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_activity">activity</a>(string $username, string $repository)
+                    <p>Get the last year of commit activity for a repository grouped by week</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_statistics">statistics</a>(string $username, string $repository)
+                    <p>Get contributor commit statistics for a repository</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_org">org</a>(string $organization, array $params = array())
+                    <p>List all repositories for an organization</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_show">show</a>(string $username, string $repository)
+                    <p>Get extended information about a repository by its username and repository name</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_create">create</a>($name, $description = &#039;&#039;, $homepage = &#039;&#039;, $public = true, $organization = null, $hasIssues = false, $hasWiki = false, $hasDownloads = false, $teamId = null, $autoInit = false)
+                    <p>Create repository</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_update">update</a>(string $username, string $repository, array $values)
+                    <p>Set information of a repository</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_remove">remove</a>(string $username, string $repository)
+                    <p>Delete a repository</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_readme">readme</a>(string $username, string $repository)
+                    <p>Get the readme content for a repository by its username and repository name</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Github/Api/Repository/Collaborators.html"><abbr title="Github\Api\Repository\Collaborators">Collaborators</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_collaborators">collaborators</a>()
+                    <p>Manage the collaborators of a repository</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Github/Api/Repository/Comments.html"><abbr title="Github\Api\Repository\Comments">Comments</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_comments">comments</a>()
+                    <p>Manage the comments of a repository</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Github/Api/Repository/Commits.html"><abbr title="Github\Api\Repository\Commits">Commits</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_commits">commits</a>()
+                    <p>Manage the commits of a repository</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Github/Api/Repository/Contents.html"><abbr title="Github\Api\Repository\Contents">Contents</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_contents">contents</a>()
+                    <p>Manage the content of a repository</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Github/Api/Repository/Downloads.html"><abbr title="Github\Api\Repository\Downloads">Downloads</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_downloads">downloads</a>()
+                    <p>Manage the content of a repository</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Github/Api/Repository/Releases.html"><abbr title="Github\Api\Repository\Releases">Releases</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_releases">releases</a>()
+                    <p>Manage the releases of a repository (Currently Undocumented)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Github/Api/Repository/DeployKeys.html"><abbr title="Github\Api\Repository\DeployKeys">DeployKeys</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_keys">keys</a>()
+                    <p>Manage the deploy keys of a repository</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Github/Api/Repository/Forks.html"><abbr title="Github\Api\Repository\Forks">Forks</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_forks">forks</a>()
+                    <p>Manage the forks of a repository</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Github/Api/Repository/Hooks.html"><abbr title="Github\Api\Repository\Hooks">Hooks</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_hooks">hooks</a>()
+                    <p>Manage the hooks of a repository</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Github/Api/Repository/Labels.html"><abbr title="Github\Api\Repository\Labels">Labels</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_labels">labels</a>()
+                    <p>Manage the labels of a repository</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Github/Api/Repository/Statuses.html"><abbr title="Github\Api\Repository\Statuses">Statuses</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_statuses">statuses</a>()
+                    <p>Manage the statuses of a repository</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_branches">branches</a>(string $username, string $repository, string $branch = null)
+                    <p>Get the branch(es) of a repository</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_contributors">contributors</a>(string $username, string $repository, boolean $includingAnonymous = false)
+                    <p>Get the contributors of a repository</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_languages">languages</a>(string $username, string $repository)
+                    <p>Get the language breakdown of a repository</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_tags">tags</a>(string $username, string $repository)
+                    <p>Get the tags of a repository</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_teams">teams</a>(string $username, string $repository)
+                    <p>Get the teams of a repository</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_watchers">watchers</a>(string $username, string $repository, integer $page = 1)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_subscribers">subscribers</a>(string $username, string $repository, integer $page = 1)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array|null
+                </td>
+                <td class="last">
+                    <a href="#method_merge">merge</a>(string $username, string $repository, string $base, string $head, string $message = null)
+                    <p>Perform a merge</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">in <a href="../../Github/Api/AbstractApi.html#method___construct"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a> at line 32</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../Github/Client.html"><abbr title="Github\Client">Client</abbr></a> $client)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Github/Client.html"><abbr title="Github\Client">Client</abbr></a></td>
+                <td>$client</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_configure">
+        <div class="location">in <a href="../../Github/Api/AbstractApi.html#method_configure"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a> at line 37</div>
+        <code>            public            
+    <strong>configure</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPerPage">
+        <div class="location">in <a href="../../Github/Api/AbstractApi.html#method_getPerPage"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a> at line 44</div>
+        <code>            public            null|int
+    <strong>getPerPage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null|int</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPerPage">
+        <div class="location">in <a href="../../Github/Api/AbstractApi.html#method_setPerPage"><abbr title="Github\Api\AbstractApi">AbstractApi</abbr></a> at line 52</div>
+        <code>            public            
+    <strong>setPerPage</strong>(null|int $perPage)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>null|int</td>
+                <td>$perPage</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_find">
+        <div class="location">at line 36</div>
+        <code>            public            array
+    <strong>find</strong>(string $keyword, array $params = array())</code>
+    </h3>
+    <div class="details">
+        <p>Search repositories by keyword:</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$keyword</td>
+                <td>the search query</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>list of found repositories</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_activity">
+        <div class="location">at line 50</div>
+        <code>            public            array
+    <strong>activity</strong>(string $username, string $repository)</code>
+    </h3>
+    <div class="details">
+        <p>Get the last year of commit activity for a repository grouped by week</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>the user who owns the repository</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$repository</td>
+                <td>the name of the repository</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>commit activity grouped by week</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_statistics">
+        <div class="location">at line 64</div>
+        <code>            public            array
+    <strong>statistics</strong>(string $username, string $repository)</code>
+    </h3>
+    <div class="details">
+        <p>Get contributor commit statistics for a repository</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>the user who owns the repository</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$repository</td>
+                <td>the name of the repository</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>list of contributors and their commit statistics</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_org">
+        <div class="location">at line 78</div>
+        <code>            public            array
+    <strong>org</strong>(string $organization, array $params = array())</code>
+    </h3>
+    <div class="details">
+        <p>List all repositories for an organization</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$organization</td>
+                <td>the name of the organization</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$params</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>list of organization repositories</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_show">
+        <div class="location">at line 92</div>
+        <code>            public            array
+    <strong>show</strong>(string $username, string $repository)</code>
+    </h3>
+    <div class="details">
+        <p>Get extended information about a repository by its username and repository name</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>the user who owns the repository</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$repository</td>
+                <td>the name of the repository</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>informations about the repository</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_create">
+        <div class="location">at line 114</div>
+        <code>            public            array
+    <strong>create</strong>($name, $description = &#039;&#039;, $homepage = &#039;&#039;, $public = true, $organization = null, $hasIssues = false, $hasWiki = false, $hasDownloads = false, $teamId = null, $autoInit = false)</code>
+    </h3>
+    <div class="details">
+        <p>Create repository</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$description</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$homepage</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$public</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$organization</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$hasIssues</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$hasWiki</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$hasDownloads</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$teamId</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$autoInit</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>returns repository data</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_update">
+        <div class="location">at line 156</div>
+        <code>            public            array
+    <strong>update</strong>(string $username, string $repository, array $values)</code>
+    </h3>
+    <div class="details">
+        <p>Set information of a repository</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>the user who owns the repository</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$repository</td>
+                <td>the name of the repository</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$values</td>
+                <td>the key => value pairs to post</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>informations about the repository</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_remove">
+        <div class="location">at line 170</div>
+        <code>            public            mixed
+    <strong>remove</strong>(string $username, string $repository)</code>
+    </h3>
+    <div class="details">
+        <p>Delete a repository</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>the user who owns the repository</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$repository</td>
+                <td>the name of the repository</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>null on success, array on error with 'message'</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_readme">
+        <div class="location">at line 184</div>
+        <code>            public            array
+    <strong>readme</strong>(string $username, string $repository)</code>
+    </h3>
+    <div class="details">
+        <p>Get the readme content for a repository by its username and repository name</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>the user who owns the repository</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$repository</td>
+                <td>the name of the repository</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>the readme content</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_collaborators">
+        <div class="location">at line 195</div>
+        <code>            public            <a href="../../Github/Api/Repository/Collaborators.html"><abbr title="Github\Api\Repository\Collaborators">Collaborators</abbr></a>
+    <strong>collaborators</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Manage the collaborators of a repository</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Github/Api/Repository/Collaborators.html"><abbr title="Github\Api\Repository\Collaborators">Collaborators</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_comments">
+        <div class="location">at line 206</div>
+        <code>            public            <a href="../../Github/Api/Repository/Comments.html"><abbr title="Github\Api\Repository\Comments">Comments</abbr></a>
+    <strong>comments</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Manage the comments of a repository</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Github/Api/Repository/Comments.html"><abbr title="Github\Api\Repository\Comments">Comments</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_commits">
+        <div class="location">at line 217</div>
+        <code>            public            <a href="../../Github/Api/Repository/Commits.html"><abbr title="Github\Api\Repository\Commits">Commits</abbr></a>
+    <strong>commits</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Manage the commits of a repository</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Github/Api/Repository/Commits.html"><abbr title="Github\Api\Repository\Commits">Commits</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_contents">
+        <div class="location">at line 228</div>
+        <code>            public            <a href="../../Github/Api/Repository/Contents.html"><abbr title="Github\Api\Repository\Contents">Contents</abbr></a>
+    <strong>contents</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Manage the content of a repository</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Github/Api/Repository/Contents.html"><abbr title="Github\Api\Repository\Contents">Contents</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_downloads">
+        <div class="location">at line 239</div>
+        <code>            public            <a href="../../Github/Api/Repository/Downloads.html"><abbr title="Github\Api\Repository\Downloads">Downloads</abbr></a>
+    <strong>downloads</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Manage the content of a repository</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Github/Api/Repository/Downloads.html"><abbr title="Github\Api\Repository\Downloads">Downloads</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_releases">
+        <div class="location">at line 250</div>
+        <code>            public            <a href="../../Github/Api/Repository/Releases.html"><abbr title="Github\Api\Repository\Releases">Releases</abbr></a>
+    <strong>releases</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Manage the releases of a repository (Currently Undocumented)</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Github/Api/Repository/Releases.html"><abbr title="Github\Api\Repository\Releases">Releases</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_keys">
+        <div class="location">at line 261</div>
+        <code>            public            <a href="../../Github/Api/Repository/DeployKeys.html"><abbr title="Github\Api\Repository\DeployKeys">DeployKeys</abbr></a>
+    <strong>keys</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Manage the deploy keys of a repository</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Github/Api/Repository/DeployKeys.html"><abbr title="Github\Api\Repository\DeployKeys">DeployKeys</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_forks">
+        <div class="location">at line 272</div>
+        <code>            public            <a href="../../Github/Api/Repository/Forks.html"><abbr title="Github\Api\Repository\Forks">Forks</abbr></a>
+    <strong>forks</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Manage the forks of a repository</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Github/Api/Repository/Forks.html"><abbr title="Github\Api\Repository\Forks">Forks</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hooks">
+        <div class="location">at line 283</div>
+        <code>            public            <a href="../../Github/Api/Repository/Hooks.html"><abbr title="Github\Api\Repository\Hooks">Hooks</abbr></a>
+    <strong>hooks</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Manage the hooks of a repository</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Github/Api/Repository/Hooks.html"><abbr title="Github\Api\Repository\Hooks">Hooks</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_labels">
+        <div class="location">at line 294</div>
+        <code>            public            <a href="../../Github/Api/Repository/Labels.html"><abbr title="Github\Api\Repository\Labels">Labels</abbr></a>
+    <strong>labels</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Manage the labels of a repository</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Github/Api/Repository/Labels.html"><abbr title="Github\Api\Repository\Labels">Labels</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_statuses">
+        <div class="location">at line 305</div>
+        <code>            public            <a href="../../Github/Api/Repository/Statuses.html"><abbr title="Github\Api\Repository\Statuses">Statuses</abbr></a>
+    <strong>statuses</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Manage the statuses of a repository</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Github/Api/Repository/Statuses.html"><abbr title="Github\Api\Repository\Statuses">Statuses</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_branches">
+        <div class="location">at line 320</div>
+        <code>            public            array
+    <strong>branches</strong>(string $username, string $repository, string $branch = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get the branch(es) of a repository</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>the username</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$repository</td>
+                <td>the name of the repository</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$branch</td>
+                <td>the name of the branch</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>list of the repository branches</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_contributors">
+        <div class="location">at line 340</div>
+        <code>            public            array
+    <strong>contributors</strong>(string $username, string $repository, boolean $includingAnonymous = false)</code>
+    </h3>
+    <div class="details">
+        <p>Get the contributors of a repository</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>the user who owns the repository</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$repository</td>
+                <td>the name of the repository</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$includingAnonymous</td>
+                <td>by default, the list only shows GitHub users. You can include non-users too by setting this to true</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>list of the repo contributors</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_languages">
+        <div class="location">at line 356</div>
+        <code>            public            array
+    <strong>languages</strong>(string $username, string $repository)</code>
+    </h3>
+    <div class="details">
+        <p>Get the language breakdown of a repository</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>the user who owns the repository</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$repository</td>
+                <td>the name of the repository</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>list of the languages</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_tags">
+        <div class="location">at line 370</div>
+        <code>            public            array
+    <strong>tags</strong>(string $username, string $repository)</code>
+    </h3>
+    <div class="details">
+        <p>Get the tags of a repository</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>the user who owns the repository</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$repository</td>
+                <td>the name of the repository</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>list of the repository tags</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_teams">
+        <div class="location">at line 384</div>
+        <code>            public            array
+    <strong>teams</strong>(string $username, string $repository)</code>
+    </h3>
+    <div class="details">
+        <p>Get the teams of a repository</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>the user who owns the repo</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$repository</td>
+                <td>the name of the repo</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>list of the languages</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_watchers">
+        <div class="location">at line 397</div>
+        <code>            public            array
+    <strong>watchers</strong>(string $username, string $repository, integer $page = 1)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$repository</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$page</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_subscribers">
+        <div class="location">at line 411</div>
+        <code>            public            array
+    <strong>subscribers</strong>(string $username, string $repository, integer $page = 1)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$repository</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$page</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_merge">
+        <div class="location">at line 430</div>
+        <code>            public            array|null
+    <strong>merge</strong>(string $username, string $repository, string $base, string $head, string $message = null)</code>
+    </h3>
+    <div class="details">
+        <p>Perform a merge</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$repository</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$base</td>
+                <td>The name of the base branch that the head will be merged into.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$head</td>
+                <td>The head to merge. This can be a branch name or a commit SHA1.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td>Commit message to use for the merge commit. If omitted, a default message will be used.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

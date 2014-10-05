@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Github\ResultPager | Scribe GitHub Library API</title>
+                    <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../classes.html">Classes</a></li>
+                            <li><a href="../namespaces.html">Namespaces</a></li>
+                        <li><a href="../interfaces.html">Interfaces</a></li>
+            <li><a href="../traits.html">Traits</a></li>
+            <li><a href="../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Scribe GitHub Library API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../Github.html">Github</a>\ResultPager</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>ResultPager</strong>        implements
+        <a href="../Github/ResultPagerInterface.html"><abbr title="Github\ResultPagerInterface">ResultPagerInterface</abbr></a></p>
+
+            <div class="description">
+            <p>Pager class for supporting pagination in github classes</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../Github/Client.html"><abbr title="Github\Client">Client</abbr></a> $client)
+                    <p>The Github client to use for pagination.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    null|array
+                </td>
+                <td class="last">
+                    <a href="#method_getPagination">getPagination</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_fetch">fetch</a>(<a href="../Github/Api/ApiInterface.html"><abbr title="Github\Api\ApiInterface">ApiInterface</abbr></a> $api, string $method, array $parameters = array())
+                    <p>Fetch a single result (page) from an api call</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_fetchAll">fetchAll</a>(<a href="../Github/Api/ApiInterface.html"><abbr title="Github\Api\ApiInterface">ApiInterface</abbr></a> $api, string $method, array $parameters = array())
+                    <p>Fetch all results (pages) from an api call Use with care - there is no maximum</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_postFetch">postFetch</a>()
+                    <p>Method that performs the actual work to refresh the pagination property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_hasNext">hasNext</a>()
+                    <p>Check to determine the availability of a next page</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_fetchNext">fetchNext</a>()
+                    <p>Fetch the next page</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_hasPrevious">hasPrevious</a>()
+                    <p>Check to determine the availability of a previous page</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_fetchPrevious">fetchPrevious</a>()
+                    <p>Fetch the previous page</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_fetchFirst">fetchFirst</a>()
+                    <p>Fetch the first page</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_fetchLast">fetchLast</a>()
+                    <p>Fetch the last page</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 38</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../Github/Client.html"><abbr title="Github\Client">Client</abbr></a> $client)</code>
+    </h3>
+    <div class="details">
+        <p>The Github client to use for pagination.</p>
+        <p>This must be the same
+instance that you got the Api instance from, i.e.:</p>
+
+<p>$client = new \Github\Client();
+$api = $client->api('someApi');
+$pager = new \Github\ResultPager($client);</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../Github/Client.html"><abbr title="Github\Client">Client</abbr></a></td>
+                <td>$client</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPagination">
+        <div class="location">at line 46</div>
+        <code>            public            null|array
+    <strong>getPagination</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null|array</td>
+            <td>pagination result of last request</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_fetch">
+        <div class="location">at line 54</div>
+        <code>            public            array
+    <strong>fetch</strong>(<a href="../Github/Api/ApiInterface.html"><abbr title="Github\Api\ApiInterface">ApiInterface</abbr></a> $api, string $method, array $parameters = array())</code>
+    </h3>
+    <div class="details">
+        <p>Fetch a single result (page) from an api call</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../Github/Api/ApiInterface.html"><abbr title="Github\Api\ApiInterface">ApiInterface</abbr></a></td>
+                <td>$api</td>
+                <td>the Api instance</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td>the method name to call on the Api instance</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td>the method parameters in an array</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>returns the result of the Api::$method() call</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_fetchAll">
+        <div class="location">at line 65</div>
+        <code>            public            array
+    <strong>fetchAll</strong>(<a href="../Github/Api/ApiInterface.html"><abbr title="Github\Api\ApiInterface">ApiInterface</abbr></a> $api, string $method, array $parameters = array())</code>
+    </h3>
+    <div class="details">
+        <p>Fetch all results (pages) from an api call Use with care - there is no maximum</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../Github/Api/ApiInterface.html"><abbr title="Github\Api\ApiInterface">ApiInterface</abbr></a></td>
+                <td>$api</td>
+                <td>the Api instance</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td>the method name to call on the Api instance</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td>the method parameters in an array</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>returns a merge of the results of the Api::$method() call</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_postFetch">
+        <div class="location">at line 90</div>
+        <code>            public            
+    <strong>postFetch</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Method that performs the actual work to refresh the pagination property</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasNext">
+        <div class="location">at line 98</div>
+        <code>            public            bool
+    <strong>hasNext</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check to determine the availability of a next page</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_fetchNext">
+        <div class="location">at line 106</div>
+        <code>            public            array
+    <strong>fetchNext</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Fetch the next page</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_hasPrevious">
+        <div class="location">at line 114</div>
+        <code>            public            bool
+    <strong>hasPrevious</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check to determine the availability of a previous page</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_fetchPrevious">
+        <div class="location">at line 122</div>
+        <code>            public            array
+    <strong>fetchPrevious</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Fetch the previous page</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_fetchFirst">
+        <div class="location">at line 130</div>
+        <code>            public            array
+    <strong>fetchFirst</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Fetch the first page</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_fetchLast">
+        <div class="location">at line 138</div>
+        <code>            public            array
+    <strong>fetchLast</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Fetch the last page</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

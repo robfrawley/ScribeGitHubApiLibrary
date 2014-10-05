@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Github\HttpClient\CachedHttpClient | Scribe GitHub Library API</title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Scribe GitHub Library API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../Github/HttpClient.html">Github\HttpClient</a>\CachedHttpClient</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>CachedHttpClient</strong>        extends <a href="../../Github/HttpClient/HttpClient.html"><abbr title="Github\HttpClient\HttpClient">HttpClient</abbr></a></p>
+
+            <div class="description">
+            <p>Performs requests on GitHub API using If-Modified-Since headers.</p>
+            <p>Returns a cached version if not modified
+Avoids increasing the X-Rate-Limit, which is cool</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(array $options = array(), <abbr title="Guzzle\Http\ClientInterface">ClientInterface</abbr> $client = null)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Github/HttpClient/HttpClient.html#method___construct"><abbr title="Github\HttpClient\HttpClient">HttpClient</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setOption">setOption</a>(string $name, mixed $value)
+                    <p>Change an option value.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Github/HttpClient/HttpClient.html#method_setOption"><abbr title="Github\HttpClient\HttpClient">HttpClient</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setHeaders">setHeaders</a>(array $headers)
+                    <p>Set HTTP headers</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Github/HttpClient/HttpClient.html#method_setHeaders"><abbr title="Github\HttpClient\HttpClient">HttpClient</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_clearHeaders">clearHeaders</a>()
+                    <p>Clears used headers</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Github/HttpClient/HttpClient.html#method_clearHeaders"><abbr title="Github\HttpClient\HttpClient">HttpClient</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addListener">addListener</a>($eventName, $listener)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Github/HttpClient/HttpClient.html#method_addListener"><abbr title="Github\HttpClient\HttpClient">HttpClient</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_addSubscriber">addSubscriber</a>(<abbr title="Symfony\Component\EventDispatcher\EventSubscriberInterface">EventSubscriberInterface</abbr> $subscriber)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Github/HttpClient/HttpClient.html#method_addSubscriber"><abbr title="Github\HttpClient\HttpClient">HttpClient</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Guzzle\Http\Message\Response">Response</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_get">get</a>(string $path, array $parameters = array(), array $headers = array())
+                    <p>Send a GET request</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Github/HttpClient/HttpClient.html#method_get"><abbr title="Github\HttpClient\HttpClient">HttpClient</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Guzzle\Http\Message\Response">Response</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_post">post</a>(string $path, mixed $body = null, array $headers = array())
+                    <p>Send a POST request</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Github/HttpClient/HttpClient.html#method_post"><abbr title="Github\HttpClient\HttpClient">HttpClient</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Guzzle\Http\Message\Response">Response</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_patch">patch</a>(string $path, mixed $body = null, array $headers = array())
+                    <p>Send a PATCH request</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Github/HttpClient/HttpClient.html#method_patch"><abbr title="Github\HttpClient\HttpClient">HttpClient</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Guzzle\Http\Message\Response">Response</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_delete">delete</a>(string $path, mixed $body = null, array $headers = array())
+                    <p>Send a DELETE request</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Github/HttpClient/HttpClient.html#method_delete"><abbr title="Github\HttpClient\HttpClient">HttpClient</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Guzzle\Http\Message\Response">Response</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_put">put</a>(string $path, mixed $body, array $headers = array())
+                    <p>Send a PUT request</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Github/HttpClient/HttpClient.html#method_put"><abbr title="Github\HttpClient\HttpClient">HttpClient</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Guzzle\Http\Message\Response">Response</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_request">request</a>(string $path, mixed $body = null, string $httpMethod = &#039;GET&#039;, array $headers = array(), array $options = array())
+                    <p>Send a request to the server, receive a response, decode the response and returns an associative array</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_authenticate">authenticate</a>(string $tokenOrLogin, null|string $password = null, $method)
+                    <p>Authenticate a user for all next requests</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Github/HttpClient/HttpClient.html#method_authenticate"><abbr title="Github\HttpClient\HttpClient">HttpClient</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Guzzle\Http\Message\Request">Request</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getLastRequest">getLastRequest</a>()
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Github/HttpClient/HttpClient.html#method_getLastRequest"><abbr title="Github\HttpClient\HttpClient">HttpClient</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Github\HttpClient\Guzzle\Http\Message\Response">Response</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_getLastResponse">getLastResponse</a>($force = false)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Github/HttpClient/Cache/CacheInterface.html"><abbr title="Github\HttpClient\Cache\CacheInterface">CacheInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getCache">getCache</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setCache">setCache</a>(<a href="../../Github/HttpClient/Cache/CacheInterface.html"><abbr title="Github\HttpClient\Cache\CacheInterface">CacheInterface</abbr></a> $cache)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">in <a href="../../Github/HttpClient/HttpClient.html#method___construct"><abbr title="Github\HttpClient\HttpClient">HttpClient</abbr></a> at line 45</div>
+        <code>            public            
+    <strong>__construct</strong>(array $options = array(), <abbr title="Guzzle\Http\ClientInterface">ClientInterface</abbr> $client = null)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Guzzle\Http\ClientInterface">ClientInterface</abbr></td>
+                <td>$client</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setOption">
+        <div class="location">in <a href="../../Github/HttpClient/HttpClient.html#method_setOption"><abbr title="Github\HttpClient\HttpClient">HttpClient</abbr></a> at line 58</div>
+        <code>            public            
+    <strong>setOption</strong>(string $name, mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>Change an option value.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>The option name</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>The value</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setHeaders">
+        <div class="location">in <a href="../../Github/HttpClient/HttpClient.html#method_setHeaders"><abbr title="Github\HttpClient\HttpClient">HttpClient</abbr></a> at line 66</div>
+        <code>            public            
+    <strong>setHeaders</strong>(array $headers)</code>
+    </h3>
+    <div class="details">
+        <p>Set HTTP headers</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_clearHeaders">
+        <div class="location">in <a href="../../Github/HttpClient/HttpClient.html#method_clearHeaders"><abbr title="Github\HttpClient\HttpClient">HttpClient</abbr></a> at line 74</div>
+        <code>            public            
+    <strong>clearHeaders</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Clears used headers</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addListener">
+        <div class="location">in <a href="../../Github/HttpClient/HttpClient.html#method_addListener"><abbr title="Github\HttpClient\HttpClient">HttpClient</abbr></a> at line 82</div>
+        <code>            public            
+    <strong>addListener</strong>($eventName, $listener)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$eventName</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$listener</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_addSubscriber">
+        <div class="location">in <a href="../../Github/HttpClient/HttpClient.html#method_addSubscriber"><abbr title="Github\HttpClient\HttpClient">HttpClient</abbr></a> at line 87</div>
+        <code>            public            
+    <strong>addSubscriber</strong>(<abbr title="Symfony\Component\EventDispatcher\EventSubscriberInterface">EventSubscriberInterface</abbr> $subscriber)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Symfony\Component\EventDispatcher\EventSubscriberInterface">EventSubscriberInterface</abbr></td>
+                <td>$subscriber</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_get">
+        <div class="location">in <a href="../../Github/HttpClient/HttpClient.html#method_get"><abbr title="Github\HttpClient\HttpClient">HttpClient</abbr></a> at line 95</div>
+        <code>            public            <abbr title="Guzzle\Http\Message\Response">Response</abbr>
+    <strong>get</strong>(string $path, array $parameters = array(), array $headers = array())</code>
+    </h3>
+    <div class="details">
+        <p>Send a GET request</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>Request path</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td>GET Parameters</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>Reconfigure the request headers for this call only</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Guzzle\Http\Message\Response">Response</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_post">
+        <div class="location">in <a href="../../Github/HttpClient/HttpClient.html#method_post"><abbr title="Github\HttpClient\HttpClient">HttpClient</abbr></a> at line 103</div>
+        <code>            public            <abbr title="Guzzle\Http\Message\Response">Response</abbr>
+    <strong>post</strong>(string $path, mixed $body = null, array $headers = array())</code>
+    </h3>
+    <div class="details">
+        <p>Send a POST request</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>Request path</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$body</td>
+                <td>Request body</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>Reconfigure the request headers for this call only</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Guzzle\Http\Message\Response">Response</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_patch">
+        <div class="location">in <a href="../../Github/HttpClient/HttpClient.html#method_patch"><abbr title="Github\HttpClient\HttpClient">HttpClient</abbr></a> at line 111</div>
+        <code>            public            <abbr title="Guzzle\Http\Message\Response">Response</abbr>
+    <strong>patch</strong>(string $path, mixed $body = null, array $headers = array())</code>
+    </h3>
+    <div class="details">
+        <p>Send a PATCH request</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>Request path</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$body</td>
+                <td>Request body</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>Reconfigure the request headers for this call only</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Guzzle\Http\Message\Response">Response</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_delete">
+        <div class="location">in <a href="../../Github/HttpClient/HttpClient.html#method_delete"><abbr title="Github\HttpClient\HttpClient">HttpClient</abbr></a> at line 119</div>
+        <code>            public            <abbr title="Guzzle\Http\Message\Response">Response</abbr>
+    <strong>delete</strong>(string $path, mixed $body = null, array $headers = array())</code>
+    </h3>
+    <div class="details">
+        <p>Send a DELETE request</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>Request path</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$body</td>
+                <td>Request body</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>Reconfigure the request headers for this call only</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Guzzle\Http\Message\Response">Response</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_put">
+        <div class="location">in <a href="../../Github/HttpClient/HttpClient.html#method_put"><abbr title="Github\HttpClient\HttpClient">HttpClient</abbr></a> at line 127</div>
+        <code>            public            <abbr title="Guzzle\Http\Message\Response">Response</abbr>
+    <strong>put</strong>(string $path, mixed $body, array $headers = array())</code>
+    </h3>
+    <div class="details">
+        <p>Send a PUT request</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>Request path</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$body</td>
+                <td>Request body</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>Reconfigure the request headers for this call only</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Guzzle\Http\Message\Response">Response</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_request">
+        <div class="location">at line 52</div>
+        <code>            public            <abbr title="Guzzle\Http\Message\Response">Response</abbr>
+    <strong>request</strong>(string $path, mixed $body = null, string $httpMethod = &#039;GET&#039;, array $headers = array(), array $options = array())</code>
+    </h3>
+    <div class="details">
+        <p>Send a request to the server, receive a response, decode the response and returns an associative array</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>Request path</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$body</td>
+                <td>Request body</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$httpMethod</td>
+                <td>HTTP method to use</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td>Request headers</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Guzzle\Http\Message\Response">Response</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_authenticate">
+        <div class="location">in <a href="../../Github/HttpClient/HttpClient.html#method_authenticate"><abbr title="Github\HttpClient\HttpClient">HttpClient</abbr></a> at line 158</div>
+        <code>            public            
+    <strong>authenticate</strong>(string $tokenOrLogin, null|string $password = null, $method)</code>
+    </h3>
+    <div class="details">
+        <p>Authenticate a user for all next requests</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$tokenOrLogin</td>
+                <td>GitHub private token/username/client ID</td>
+            </tr>
+                    <tr>
+                <td>null|string</td>
+                <td>$password</td>
+                <td>GitHub password/secret (optionally can contain $authMethod)</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$method</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>If no authentication method was given</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLastRequest">
+        <div class="location">in <a href="../../Github/HttpClient/HttpClient.html#method_getLastRequest"><abbr title="Github\HttpClient\HttpClient">HttpClient</abbr></a> at line 168</div>
+        <code>            public            <abbr title="Guzzle\Http\Message\Request">Request</abbr>
+    <strong>getLastRequest</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Guzzle\Http\Message\Request">Request</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getLastResponse">
+        <div class="location">at line 99</div>
+        <code>            public            <abbr title="Github\HttpClient\Guzzle\Http\Message\Response">Response</abbr>
+    <strong>getLastResponse</strong>($force = false)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$force</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Github\HttpClient\Guzzle\Http\Message\Response">Response</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCache">
+        <div class="location">at line 32</div>
+        <code>            public            <a href="../../Github/HttpClient/Cache/CacheInterface.html"><abbr title="Github\HttpClient\Cache\CacheInterface">CacheInterface</abbr></a>
+    <strong>getCache</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Github/HttpClient/Cache/CacheInterface.html"><abbr title="Github\HttpClient\Cache\CacheInterface">CacheInterface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setCache">
+        <div class="location">at line 44</div>
+        <code>            public            
+    <strong>setCache</strong>(<a href="../../Github/HttpClient/Cache/CacheInterface.html"><abbr title="Github\HttpClient\Cache\CacheInterface">CacheInterface</abbr></a> $cache)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Github/HttpClient/Cache/CacheInterface.html"><abbr title="Github\HttpClient\Cache\CacheInterface">CacheInterface</abbr></a></td>
+                <td>$cache</td>
+                <td>CacheInterface</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>
