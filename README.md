@@ -1,16 +1,15 @@
-# Symfony GitHub API Bundle
+# GitHub API Bundle
 
-[![Build Status](https://travis-ci.org/scribenet/ScribeGitHubApiBundle.svg?branch=master)](https://travis-ci.org/scribenet/ScribeGitHubApiBundle) [![Coverage Status](https://img.shields.io/coveralls/scribenet/ScribeGitHubApiBundle.svg)](https://coveralls.io/r/scribenet/ScribeGitHubApiBundle)
+[![Build Status](https://travis-ci.org/scribenet/ScribeGitHubApiLibrary.svg?branch=master)](https://travis-ci.org/scribenet/ScribeGitHubApiLibrary) [![Coverage Status](https://img.shields.io/coveralls/scribenet/ScribeGitHubApiLibrary.svg)](https://coveralls.io/r/scribenet/ScribeGitHubApiLibrary) [![Dependency Status](https://www.versioneye.com/user/projects/54310400fc3f5c20cb0004c1/badge.svg?style=flat)](https://www.versioneye.com/user/projects/54310400fc3f5c20cb0004c1)
 
-A simple Object Oriented wrapper for GitHub API, written with PHP5.
-
-Uses [GitHub API v3](http://developer.github.com/v3/). The object API is very similar to the RESTful API.
+This is a simple, object oriented PHP5 client for [GitHub API v3](http://developer.github.com/v3/), written with an API intentially similar to GitHub's RESTful API.
 
 ## Features
 
-* Follows PSR-0 conventions and coding standard: autoload friendly
-* Light and fast thanks to lazy loading of API classes
-* Extensively tested and documented
+* Follows the [PSR-0](http://www.php-fig.org/psr/psr-0/) standard to accomodate easy autoloading using [Composer](https://getcomposer.org/) or another means of your choosing.
+* Lightweight, fast, and friendly object model utalizing lazy loading with an intentional similarly to GitHub's own RESTful API for ease of use.
+* Extensive testing with [PHPUnit](https://phpunit.de/) utalizing [Travis Continuous Integration](https://travis-ci.org/scribenet/ScribeGitHubApiBundle), code coverage reporting using [Coveralls](https://coveralls.io/r/scribenet/ScribeGitHubApiLibrary), and dependency version monitoring using [VersionEye](https://www.versioneye.com/user/projects/54310400fc3f5c20cb0004c1).
+* Documentation and examples 
 
 ## Requirements
 

@@ -1,2 +1,2 @@
 service_name: travis-ci
-src_dir: lib/Github
+src_dir: lib
