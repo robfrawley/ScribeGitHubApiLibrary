@@ -12,6 +12,22 @@ $users = $client->api('user')->find('KnpLabs');
 
 Returns an array of found users.
 
+### Lists all users, in the order they signed up, since the last user you've seen
+
+```php
+$users = $client->api('user')->all(135);
+```
+
+Returns an array of all users that registered after the user whose ID is 135.
+
+### Lists all users, in the order they signed up
+
+```php
+$users = $client->api('user')->all();
+```
+
+Returns an array of all users.
+
 ### Get information about a user
 
 ```php
@@ -92,12 +108,24 @@ $client->api('current_user')->follow()->unfollow('symfony');
 Returns an array of followed users.
 
 ### Get repos that a specific user is watching
+> See [more](activity.md).
 
 ```php
 $users = $client->api('user')->watched('ornicar');
 ```
 
+For authenticated user use.
+
+> Requires [authentication](security.md).
+
+```php
+$users = $client->api('current_user')->watchers()->all();
+```
+
+Returns an array of watched repos.
+
 ### Get repos that a specific user has starred
+> See [more](activity.md).
 
 ```php
 $users = $client->api('user')->starred('ornicar');
@@ -108,10 +136,10 @@ For authenticated user use.
 > Requires [authentication](security.md).
 
 ```php
-$users = $client->api('current_user')->watched();
+$users = $client->api('current_user')->starring()->all();
 ```
 
-Returns an array of watched repos.
+Returns an array of starred repos.
 
 ### Get the authenticated user emails
 

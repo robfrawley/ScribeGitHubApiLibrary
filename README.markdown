@@ -1,6 +1,6 @@
-# PHP GitHub API
+# Symfony GitHub API Bundle
 
-[![Build Status](https://secure.travis-ci.org/KnpLabs/php-github-api.png)](http://travis-ci.org/KnpLabs/php-github-api)
+[![Build Status](https://travis-ci.org/scribenet/ScribeGitHubApiBundle.svg)](https://travis-ci.org/scribenet/ScribeGitHubApiBundle)
 
 A simple Object Oriented wrapper for GitHub API, written with PHP5.
 
@@ -33,27 +33,16 @@ $ php composer.phar install
 ```
 Now we can use autoloader from Composer by:
 
-```json
+```yaml
 {
     "require": {
-        "knplabs/github-api": "~1.2"
-    }
+        "knplabs/github-api": "*"
+    },
+    "minimum-stability": "dev"
 }
 ```
 
 > `php-github-api` follows the PSR-0 convention names for its classes, which means you can easily integrate `php-github-api` classes loading in your own autoloader.
-
-## Using Laravel?
-
-[Laravel GitHub](https://github.com/GrahamCampbell/Laravel-GitHub) by [Graham Campbell](https://github.com/GrahamCampbell) might interest you.
-
-```json
-{
-    "require": {
-        "graham-campbell/github": "0.1.*"
-    }
-}
-```
 
 ## Basic usage of `php-github-api` client
 
