@@ -3,7 +3,6 @@
 [![Build Status](https://img.shields.io/travis/scribenet/ScribeGitHubApiLibrary/master.svg?style=flat-square)](https://travis-ci.org/scribenet/ScribeGitHubApiLibrary)
 [![Quality Score](http://img.shields.io/codeclimate/github/scribenet/ScribeGitHubApiLibrary.svg?style=flat-square)](https://codeclimate.com/github/scribenet/ScribeGitHubApiLibrary)
 [![Coverage Status](http://img.shields.io/coveralls/scribenet/ScribeGitHubApiLibrary.svg?style=flat-square)](https://codeclimate.com/github/scribenet/ScribeGitHubApiLibrary)
-[![Open Issues](http://img.shields.io/github/issues/scribenet/ScribeGitHubApiLibrary.svg?style=flat-square&cache-buster=1)](https://github.com/scribenet/ScribeGitHubApiLibrary/issues)
 [![Dependency Status](http://img.shields.io/gemnasium/scribenet/ScribeGitHubApiLibrary.svg?style=flat-square)](https://gemnasium.com/scribenet/ScribeGitHubApiLibrary)
 [![Software License](http://img.shields.io/packagist/l/scribe/github-api-library.svg?style=flat-square)](LICENSE.md)
 
@@ -14,7 +13,7 @@ This is a simple, object oriented PHP5 client for [GitHub's API (v3)](http://dev
 * **Code Standards**: Implements [PSR-0](http://www.php-fig.org/psr/psr-0/) code and structure standards to accommodate auto-loading using [Composer](https://getcomposer.org/) or another class auto-loading solution.
 * **Speed and Familiarity**: Lightweight, fast, and friendly object model utilizing lazy loading with an intentional similarly to GitHub's own RESTful API.
 * **Tests and Continuous Integration**: Extensive [PHPUnit](https://phpunit.de/) tests utilizing [Travis CI](https://travis-ci.org/scribenet/ScribeGitHubApiLibrary) as our continuous integration service.
-* **Quality, Coverage and Dependencies**: Code quality and test coverage reports with [Code Climate](https://codeclimate.com/github/scribenet/ScribeGitHubApiLibrary), and dependency version monitoring using [Gemnasium](https://gemnasium.com/scribenet/ScribeGitHubApiLibrary).
+* **Quality, Coverage and Dependencies**: Code quality reports with [Code Climate](https://codeclimate.com/github/scribenet/ScribeGitHubApiLibrary), coverage reports with [Coveralls](https://coveralls.io/r/scribenet/ScribeGitHubApiLibrary), and dependency version monitoring using [Gemnasium](https://gemnasium.com/scribenet/ScribeGitHubApiLibrary).
 * **Documentation and Examples**: Comprehensive [examples](doc/) written in markdown and automatically generated [API documentationn](https://scribenet.github.io/ScribeGitHubApiLibrary/).
 
 ## Requirements
