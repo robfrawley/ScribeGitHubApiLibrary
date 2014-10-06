@@ -3,9 +3,9 @@
 [![Build Status](https://img.shields.io/travis/scribenet/ScribeGitHubApiLibrary/master.svg?style=flat-square)](https://travis-ci.org/scribenet/ScribeGitHubApiLibrary)
 [![Quality Score](http://img.shields.io/codeclimate/github/scribenet/ScribeGitHubApiLibrary.svg?style=flat-square)](https://codeclimate.com/github/scribenet/ScribeGitHubApiLibrary)
 [![Coverage Status](http://img.shields.io/codeclimate/coverage/github/scribenet/ScribeGitHubApiLibrary.svg?style=flat-square)](https://scrutinizer-ci.com/g/GrahamCampbell/Laravel-GitHub)
-[![Open Issues](http://img.shields.io/github/issues/scribenet/ScribeGitHubApiLibrary.svg?style=flat-square)](https://github.com/scribenet/ScribeGitHubApiLibrary/issues)
+[![Open Issues](http://img.shields.io/github/issues/scribenet/ScribeGitHubApiLibrary.svg?style=flat-square&cache-buster=1)](https://github.com/scribenet/ScribeGitHubApiLibrary/issues)
 [![Dependency Status](http://img.shields.io/gemnasium/scribenet/ScribeGitHubApiLibrary.svg?style=flat-square)](https://gemnasium.com/scribenet/ScribeGitHubApiLibrary)
-[![Software License](http://img.shields.io/packagist/l/scribe/scribe/github-api-library.svg?style=flat-square)](LICENSE.md)
+[![Software License](http://img.shields.io/packagist/l/scribe/github-api-library.svg?style=flat-square)](LICENSE.md)
 
 This is a simple, object oriented PHP5 client for [GitHub's API (v3)](http://developer.github.com/v3/), implemented with an intentionally similar API to GitHub's native RESTful API.
 
