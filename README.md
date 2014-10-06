@@ -4,6 +4,7 @@
 [![Quality Score](http://img.shields.io/codeclimate/github/scribenet/ScribeGitHubApiLibrary.svg?style=flat-square)](https://codeclimate.com/github/scribenet/ScribeGitHubApiLibrary)
 [![Coverage Status](http://img.shields.io/coveralls/scribenet/ScribeGitHubApiLibrary.svg?style=flat-square)](https://codeclimate.com/github/scribenet/ScribeGitHubApiLibrary)
 [![Dependency Status](http://img.shields.io/gemnasium/scribenet/ScribeGitHubApiLibrary.svg?style=flat-square)](https://gemnasium.com/scribenet/ScribeGitHubApiLibrary)
+[![Latest Version](http://img.shields.io/packagist/v/scribe/github-api-library.svg?style=flat-square)](https://packagist.org/packages/scribe/github-api-library)
 [![Software License](http://img.shields.io/packagist/l/scribe/github-api-library.svg?style=flat-square)](LICENSE.md)
 
 This is a simple, object oriented PHP5 client for [GitHub's API (v3)](http://developer.github.com/v3/), implemented with an intentionally similar API to GitHub's native RESTful API.
