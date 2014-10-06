@@ -15,7 +15,7 @@ This is a simple, object oriented PHP5 client for [GitHub's API (v3)](http://dev
 * **Speed and Familiarity**: Lightweight, fast, and friendly object model utilizing lazy loading with an intentional similarly to GitHub's own RESTful API.
 * **Tests and Continuous Integration**: Extensive [PHPUnit](https://phpunit.de/) tests utilizing [Travis CI](https://travis-ci.org/scribenet/ScribeGitHubApiLibrary) as our continuous integration service.
 * **Quality, Coverage and Dependencies**: Code quality and test coverage reports with [Code Climate](https://codeclimate.com/github/scribenet/ScribeGitHubApiLibrary), and dependency version monitoring using [Gemnasium](https://gemnasium.com/scribenet/ScribeGitHubApiLibrary).
-* Documentation and Examples**: Comprehensive [examples](doc/) written in markdown and automatically generated [API documentationn](https://scribenet.github.io/ScribeGitHubApiLibrary/).
+* **Documentation and Examples**: Comprehensive [examples](doc/) written in markdown and automatically generated [API documentationn](https://scribenet.github.io/ScribeGitHubApiLibrary/).
 
 ## Requirements
 
