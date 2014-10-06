@@ -1,122 +1,86 @@
 # GitHub API Bundle
 
-[![Build Status](https://travis-ci.org/scribenet/ScribeGitHubApiLibrary.svg?branch=master)](https://travis-ci.org/scribenet/ScribeGitHubApiLibrary) [![Coverage Status](https://img.shields.io/coveralls/scribenet/ScribeGitHubApiLibrary.svg)](https://coveralls.io/r/scribenet/ScribeGitHubApiLibrary) [![Dependency Status](https://www.versioneye.com/user/projects/54310400fc3f5c20cb0004c1/badge.svg?style=flat)](https://www.versioneye.com/user/projects/54310400fc3f5c20cb0004c1)
+[![Build Status](https://img.shields.io/travis/scribenet/ScribeGitHubApiLibrary/master.svg?style=flat-square)](https://travis-ci.org/scribenet/ScribeGitHubApiLibrary)
+[![Quality Score](http://img.shields.io/codeclimate/github/scribenet/ScribeGitHubApiLibrary.svg?style=flat-square)](https://codeclimate.com/github/scribenet/ScribeGitHubApiLibrary)
+[![Coverage Status](http://img.shields.io/codeclimate/coverage/github/scribenet/ScribeGitHubApiLibrary.svg?style=flat-square)](https://scrutinizer-ci.com/g/GrahamCampbell/Laravel-GitHub)
+[![Open Issues](http://img.shields.io/github/issues/scribenet/ScribeGitHubApiLibrary.svg?style=flat-square)](https://github.com/scribenet/ScribeGitHubApiLibrary/issues)
+[![Dependency Status](http://img.shields.io/gemnasium/scribenet/ScribeGitHubApiLibrary.svg?style=flat-square)](https://gemnasium.com/scribenet/ScribeGitHubApiLibrary)
+[![Software License](http://img.shields.io/packagist/l/scribe/scribe/github-api-library.svg?style=flat-square)](LICENSE.md)
 
-This is a simple, object oriented PHP5 client for [GitHub API v3](http://developer.github.com/v3/), written with an API intentially similar to GitHub's RESTful API.
+This is a simple, object oriented PHP5 client for [GitHub's API (v3)](http://developer.github.com/v3/), implemented with an intentionally similar API to GitHub's native RESTful API.
 
 ## Features
 
-* Follows the [PSR-0](http://www.php-fig.org/psr/psr-0/) standard to accomodate easy autoloading using [Composer](https://getcomposer.org/) or another means of your choosing.
-* Lightweight, fast, and friendly object model utalizing lazy loading with an intentional similarly to GitHub's own RESTful API for ease of use.
-* Extensive testing with [PHPUnit](https://phpunit.de/) utalizing [Travis Continuous Integration](https://travis-ci.org/scribenet/ScribeGitHubApiBundle), code coverage reporting using [Coveralls](https://coveralls.io/r/scribenet/ScribeGitHubApiLibrary), and dependency version monitoring using [VersionEye](https://www.versioneye.com/user/projects/54310400fc3f5c20cb0004c1).
-* Documentation and examples 
+* **Code Standards**: Implements [PSR-0](http://www.php-fig.org/psr/psr-0/) code and structure standards to accommodate auto-loading using [Composer](https://getcomposer.org/) or another class auto-loading solution.
+* **Speed and Familiarity**: Lightweight, fast, and friendly object model utilizing lazy loading with an intentional similarly to GitHub's own RESTful API.
+* **Tests and Continuous Integration**: Extensive [PHPUnit](https://phpunit.de/) tests utilizing [Travis CI](https://travis-ci.org/scribenet/ScribeGitHubApiLibrary) as our continuous integration service.
+* **Quality, Coverage and Dependencies**: Code quality and test coverage reports with [Code Climate](https://codeclimate.com/github/scribenet/ScribeGitHubApiLibrary), and dependency version monitoring using [Gemnasium](https://gemnasium.com/scribenet/ScribeGitHubApiLibrary).
+* Documentation and Examples**: Comprehensive [examples](doc/) written in markdown and automatically generated [API documentationn](https://scribenet.github.io/ScribeGitHubApiLibrary/).
 
 ## Requirements
 
-* PHP >= 5.3.2 with [cURL](http://php.net/manual/en/book.curl.php) extension,
-* [Guzzle](https://github.com/guzzle/guzzle) library,
-* (optional) PHPUnit to run tests.
+This library requires a short list of dependencies for both a production installation or a development build.
 
-## Autoload
+### Production
 
-The new version of `php-github-api` using [Composer](http://getcomposer.org).
-The first step to use `php-github-api` is to download composer:
+* PHP >= [5.5](http://php.net/manual/en/migration55.changes.php) or [HHVM](http://hhvm.com/)
+* The [Curl](http://php.net/manual/en/book.curl.php) extension
+* The [Guzzle](https://github.com/guzzle/guzzle) [framework](http://docs.guzzlephp.org/en/latest/)
 
-```bash
-$ curl -s http://getcomposer.org/installer | php
-```
+### Development
 
-Then we have to install our dependencies using:
-```bash
-$ php composer.phar install
-```
-Now we can use autoloader from Composer by:
+* [PHPUnit](https://phpunit.de/) >= 4.0
+* [Code Climate Reporter](https://github.com/codeclimate/php-test-reporter) >= 0.1.2
+* [Sami](https://github.com/fabpot/sami) >= 2.0
 
-```json
-{
-    "require": {
-        "knplabs/github-api": "~1.2"
-    }
-}
-```
+## Installation
 
-> `php-github-api` follows the PSR-0 convention names for its classes, which means you can easily integrate `php-github-api` classes loading in your own autoloader.
-
-## Using Laravel?
-
-[Laravel GitHub](https://github.com/GrahamCampbell/Laravel-GitHub) by [Graham Campbell](https://github.com/GrahamCampbell) might interest you.
+This library can be included into your project easily using [Composer](http://getcomposer.org).
 
 ```json
 {
     "require": {
-        "graham-campbell/github": "0.1.*"
+        "scribe/github-api-library": "dev-master"
     }
 }
 ```
 
-## Basic usage of `php-github-api` client
+## Usage
+
+### Basic Usage
 
 ```php
 <?php
 
-// This file is generated by Composer
 require_once 'vendor/autoload.php';
 
 $client = new \Github\Client();
 $repositories = $client->api('user')->repositories('ornicar');
 ```
 
-From `$client` object, you can access to all GitHub.
-
-## Cache usage
+### Cached Usage
 
 ```php
 <?php
 
-// This file is generated by Composer
 require_once 'vendor/autoload.php';
 
 $client = new \Github\Client(
     new \Github\HttpClient\CachedHttpClient(array('cache_dir' => '/tmp/github-api-cache'))
 );
 
-// Or select directly which cache you want to use
 $client = new \Github\HttpClient\CachedHttpClient();
 $client->setCache(
-    // Built in one, or any cache implementing this interface:
-    // Github\HttpClient\Cache\CacheInterface
     new \Github\HttpClient\Cache\FilesystemCache('/tmp/github-api-cache')
 );
 
 $client = new \Github\Client($client);
 ```
 
-Using cache, the client will get cached responses if resources haven't changed since last time,
-**without** reaching the `X-Rate-Limit` [imposed by github](http://developer.github.com/v3/#rate-limiting).
-
-
 ## Documentation
 
-See the `doc` directory for more detailed documentation.
+For general usage and examples, you can check the [doc](doc/) directory. For a comprehensive API reference, check this project's [github.io webpage](https://scribenet.github.io/ScribeGitHubApiLibrary/).
 
-## License
+## Contributors
 
-`php-github-api` is licensed under the MIT License - see the LICENSE file for details
-
-## Credits
-
-### Sponsored by
-
-[![KnpLabs Team](http://knplabs.pl/bundles/knpcorporate/images/logo.png)](http://knplabs.com)
-
-### Contributors
-
-- Thanks to [Thibault Duplessis aka. ornicar](http://github.com/ornicar) for his first version of this library.
-- Thanks to [Joseph Bielawski aka. stloyd](http://github.com/stloyd) for his contributions and support.
-- Thanks to [noloh](http://github.com/noloh) for his contribution on the Object API.
-- Thanks to [bshaffer](http://github.com/bshaffer) for his contribution on the Repo API.
-- Thanks to [Rolf van de Krol](http://github.com/rolfvandekrol) for his countless contributions.
-- Thanks to [Nicolas Pastorino](http://github.com/jeanvoye) for his contribution on the Pull Request API.
-- Thanks to [Edoardo Rivello](http://github.com/erivello) for his contribution on the Gists API.
-
-Thanks to GitHub for the high quality API and documentation.
+This project has code contributed from an [array of individuals](https://github.com/scribenet/ScribeGitHubApiLibrary/graphs/contributors).
