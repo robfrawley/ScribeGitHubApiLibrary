@@ -25,17 +25,18 @@ This library requires a short list of dependencies for both a production install
 
 * PHP >= [5.5](http://php.net/manual/en/migration55.changes.php) or [HHVM](http://hhvm.com/)
 * The [Curl](http://php.net/manual/en/book.curl.php) extension
-* The [Guzzle](https://github.com/guzzle/guzzle) [framework](http://docs.guzzlephp.org/en/latest/)
+* The [Guzzle](https://github.com/guzzle/guzzle) [HTTP request framework](http://docs.guzzlephp.org/en/latest/)
 
 ### Development
 
 * [PHPUnit](https://phpunit.de/) >= 4.0
+* [Coveralls Reporter](https://github.com/satooshi/php-coveralls) >= 0.6.1
 * [Code Climate Reporter](https://github.com/codeclimate/php-test-reporter) >= 0.1.2
 * [Sami](https://github.com/fabpot/sami) >= 2.0
 
 ## Installation
 
-This library can be included into your project easily using [Composer](http://getcomposer.org).
+This library can be included into your project easily using [Composer](http://getcomposer.org) by adding the dependency to the `require` section of your `composer.json` project file.
 
 ```json
 {

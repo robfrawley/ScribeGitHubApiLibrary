@@ -1,8 +1,8 @@
 # The MIT License (MIT)
 
-**Copyright (c) 2014 Scribe Inc. <source@scribenet.com>**
-**Copyright (c) 2012 KnpLabs**
-**Copyright (c) 2010 Thibault Duplessis <thibault.duplessis@gmail.com>**
+**Copyright (c) 2014 Scribe Inc. <[source@scribenet.com](mailto:source@scribenet.com)>**
+**Copyright (c) 2012 KnpLabs <[knplabs.com](http://knplabs.com/)>**
+**Copyright (c) 2010 Thibault Duplessis <[thibault.duplessis@gmail.com](mailto:thibault.duplessis@gmail.com)>**
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in

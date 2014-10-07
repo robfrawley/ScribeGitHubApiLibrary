@@ -12,7 +12,7 @@
          bootstrap="test/bootstrap.php"
 >
     <testsuites>
-        <testsuite name="php-github-api Test Suite">
+        <testsuite name="github-api-library Test Suite">
             <directory>./test/Github/</directory>
         </testsuite>
     </testsuites>
@@ -25,7 +25,7 @@
 
     <filter>
         <whitelist>
-            <directory suffix=".php">./lib/Github/</directory>
+            <directory suffix=".php">./lib</directory>
         </whitelist>
     </filter>
 

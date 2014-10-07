@@ -1,14 +1,14 @@
 {
     "name":        "scribe/github-api-library",
     "type":        "library",
-    "description": "GitHub API client for PHP5.",
+    "description": "GitHub API client for PHP5",
     "homepage":    "https://github.com/scribenet/ScribeGitHubApiLibrary",
-    "keywords":    [ "github", "gh", "api", "gist", "scribe "],
+    "keywords":    [ "github", "gh", "api", "v3", "git", "scribe" ],
     "license":     "MIT",
     "authors": [
         {
-            "name":     "Rob Frawley",
-            "email":    "opensource@scribenet.com",
+            "name":     "Rob Frawley 2nd",
+            "email":    "source@scribenet.com",
             "homepage": "http://scribenet.com"
         },
         {
@@ -29,7 +29,7 @@
     "require-dev": {
         "phpunit/phpunit":               "~4.0",
         "satooshi/php-coveralls":        "~0.6",
-        "codeclimate/php-test-reporter": "dev-master",
+        "codeclimate/php-test-reporter": "~0.1",
         "sami/sami":                     "~2.0"
     },
     "autoload": {
